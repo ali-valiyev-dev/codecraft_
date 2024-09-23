@@ -46,3 +46,42 @@ export const SOCIAL_LINKS = [
     alt: "LinkedIn",
   },
 ];
+
+export const solutions = [
+  {
+    icon: "mdi:code-tags",
+    title: "Software Development",
+    desc: "Rabalon offers tailor-made software development solutions to help your business grow.",
+    to: "solutions/software_development",
+  },
+  {
+    icon: "mdi:cloud-outline",
+    title: "Cloud Solutions",
+    desc: "Transform your cloud experience with public & private cloud solutions.",
+    to: "solutions/cloud_solutions",
+  },
+  {
+    icon: "mdi:chart-line",
+    title: "Data Science & AI",
+    desc: "Revolutionize your business by turning big data into meaningful insights with Rabalon’s Data Science and AI solutions.",
+    to: "solutions/data_science_and_artificial_intelligence",
+  },
+  {
+    icon: "mdi:server-network",
+    title: "Infrastructure",
+    desc: "IT infrastructure solutions that are secure, flexible, and reliable that aid businesses in significantly reducing costs and boosting revenues.",
+    to: "solutions/infrastructure_solutions",
+  },
+  {
+    icon: "mdi:access-point-network",
+    title: "IoT Solutions",
+    desc: "Connecting the physical and digital worlds to develop an intelligent ecosystem that adds value to your business.",
+    to: "solutions/internet_of_things_solutions",
+  },
+  {
+    icon: "mdi:shield-lock",
+    title: "Cyber Security",
+    desc: "Secure and strengthen your enterprise with Rabalon’s integrated network security solutions.",
+    to: "solutions/security_solutions",
+  },
+];

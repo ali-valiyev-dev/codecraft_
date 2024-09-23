@@ -1,17 +1,15 @@
-import PropTypes from "prop-types";
 import { Header } from "../components";
+import { Outlet } from "react-router-dom";
 
-const MainLayout = ({ children }) => {
+const MainLayout = () => {
   return (
-    <div className="bg-primary-blue w-full min-h-screen flex flex-col  items-center relative">
+    <div className="bg-primary-blue w-full flex flex-col  items-center relative ">
       <Header />
-      <main className="">{children}</main>
+      <main className="bg-primary-blue h-screen w-full">
+        <Outlet />
+      </main>
     </div>
   );
-};
-
-MainLayout.propTypes = {
-  children: PropTypes.node,
 };
 
 export default MainLayout;

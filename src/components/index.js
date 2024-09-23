@@ -5,10 +5,11 @@ import NavLink from "./NavLink.jsx";
 import MobileNavLink from "./MobileNavLink.jsx";
 import NavLinksWrapper from "./NavLinksWrapper.jsx";
 import Logo from "./Logo.jsx";
-import Hero from "./Hero.jsx";
 import DropdownMenu from "./DropdownMenu.jsx";
 import SocialLink from "./SocialLink.jsx";
 import Button from "./Button.jsx";
+import SolutionCard from "./SolutionCard.jsx";
+import Container from "./Container.jsx";
 
 export {
   Header,
@@ -18,8 +19,9 @@ export {
   MobileNavLink,
   NavLinksWrapper,
   Logo,
-  Hero,
   DropdownMenu,
   SocialLink,
   Button,
+  SolutionCard,
+  Container,
 };

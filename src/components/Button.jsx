@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 const Button = ({ title, onClick, icon, alt }) => (
   <button
     type="button"
-    className="flex items-center gap-3 border border-neutral-white hover:border-neutral-white/40 rounded-lg py-3 px-6 font-bold text-nowrap group bg-primary-blue/40 transition-colors duration-300 ease-in-out"
+    className="w-full flex items-center justify-center gap-3 border border-l-neutral-cyanBluishGray hover:border-neutral-white text-neutral-white rounded-lg py-3 px-6 font-bold text-nowrap group bg-primary-blue/50 hover:bg-primary-blue transition-colors duration-300 ease-in-out"
     onClick={onClick}
     aria-label={alt}>
     {title}

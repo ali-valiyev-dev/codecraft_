@@ -1,11 +1,12 @@
-import { Hero } from "../components";
+import { Hero, Solutions } from "../sections";
 
 const Home = () => {
   return (
     <div
       id="home"
-      className="mx-auto max-w-screen-2xl">
+      className="bg-primary-blue flex flex-col items-center justify-center">
       <Hero />
+      <Solutions />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const DropdownMenu = ({ items }) => {
   const [menuHeight, setMenuHeight] = useState(0);
@@ -24,11 +25,11 @@ const DropdownMenu = ({ items }) => {
           <li
             key={index}
             className="group hover:bg-primary-blue transition-colors duration-300">
-            <a
-              href={item.href}
+            <Link
+              to={item.href}
               className="block p-4 text-primary group-hover:text-neutral-white text-nowrap text-xl">
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
