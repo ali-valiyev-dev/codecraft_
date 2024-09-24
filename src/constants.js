@@ -47,7 +47,7 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-export const solutions = [
+export const SOLUTIONS = [
   {
     icon: "mdi:code-tags",
     title: "Software Development",
@@ -84,4 +84,11 @@ export const solutions = [
     desc: "Secure and strengthen your enterprise with Rabalon’s integrated network security solutions.",
     to: "solutions/security_solutions",
   },
+];
+
+export const STATS = [
+  { label: "Regional Teams", total: 5 },
+  { label: "Global Engineers", total: 100 },
+  { label: "Expert Consultants", total: 20 },
+  { label: "Completed Projects", total: 1000 },
 ];

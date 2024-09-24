@@ -7,7 +7,7 @@ const Hero = () => {
       className="h-screen overflow-hidden">
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/rabalon.mp4"
+        src="/rabalon-hero.mp4"
         autoPlay
         muted
         loop

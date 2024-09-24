@@ -1,4 +1,4 @@
-import { Hero, Solutions } from "../sections";
+import { About, Hero, Solutions } from "../sections";
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       className="bg-primary-blue flex flex-col items-center justify-center">
       <Hero />
       <Solutions />
+      <About />
     </div>
   );
 };

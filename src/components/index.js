@@ -10,6 +10,9 @@ import SocialLink from "./SocialLink.jsx";
 import Button from "./Button.jsx";
 import SolutionCard from "./SolutionCard.jsx";
 import Container from "./Container.jsx";
+import SectionHeader from "./SectionHeader.jsx";
+import Statistics from "./Statistics.jsx";
+import StatisticItem from "./StatisticItem.jsx";
 
 export {
   Header,
@@ -24,4 +27,7 @@ export {
   Button,
   SolutionCard,
   Container,
+  SectionHeader,
+  Statistics,
+  StatisticItem,
 };

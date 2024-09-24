@@ -4,16 +4,18 @@ import { Icon } from "@iconify/react";
 const Button = ({ title, onClick, icon, alt }) => (
   <button
     type="button"
-    className="w-full flex items-center justify-center gap-3 border border-l-neutral-cyanBluishGray hover:border-neutral-white text-neutral-white rounded-lg py-3 px-6 font-bold text-nowrap group bg-primary-blue/50 hover:bg-primary-blue transition-colors duration-300 ease-in-out"
+    className="w-max flex items-center gap-2.5 sm:gap-3 border rounded-lg py-2 sm:py-4 px-2 sm:px-6 font-medium text-nowrap group transition-colors duration-300 ease-in-out
+    
+    border-neutral-cyanBluishGray hover:border-primary-blue bg-primary-blue/70 hover:bg-neutral-white text-neutral-white hover:text-primary-blue
+    "
     onClick={onClick}
     aria-label={alt}>
     {title}
     {icon && (
       <Icon
         icon={icon}
-        width={24}
-        height={24}
-        className="text-xl xl:text-2xl text-primary-black group-hover:text-primary-white"
+        width={20}
+        height={20}
       />
     )}
   </button>
