@@ -1,4 +1,4 @@
-import { About, Hero, Solutions } from "../sections";
+import { About, CaseStudies, Hero, Solutions } from "../sections";
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
       <Hero />
       <Solutions />
       <About />
+      <CaseStudies />
     </div>
   );
 };

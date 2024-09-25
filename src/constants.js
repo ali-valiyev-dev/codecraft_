@@ -92,3 +92,41 @@ export const STATS = [
   { label: "Expert Consultants", total: 20 },
   { label: "Completed Projects", total: 1000 },
 ];
+
+export const CASE_STUDIES = [
+  {
+    image: "./ferrum-capital-cover.jpg",
+    imageAlt: "Image of Ferrum Capital",
+    logo: "./ferrum-capital-logo.svg",
+    logoAlt: "Logo of Ferrum Capital",
+    title:
+      "Detecting key cyber-security weaknesses & improve business processes",
+    overview:
+      "Xalq bank needs business process automation tool to clear accountability, customizable notifications, valuable insights, and faster turnaround times make it easier to eliminate wasteful activities and focus on enhancing tasks.",
+    achievement:
+      "We conducted a deep audit of three major blocks: Wired and wireless data network, Unified communications, Information Security.",
+  },
+  {
+    image: "./xalq-bank-cover.jpg",
+    imageAlt: "Image of Xalq Bank",
+    logo: "./xalq-bank-logo.svg",
+    logoAlt: "Logo of Xalq Bank",
+    title: "Improving Accountability with tracking & monitoring systems.",
+    overview:
+      "Xalq bank needs business process automation tool to clear accountability, customizable notifications, valuable insights, and faster turnaround times make it easier to eliminate wasteful activities and focus on enhancing tasks.",
+    achievement:
+      "In Xalq bank our team has integrated new software program that made it possible to track and monitor processes while they are running, which can improve accountability and visibility. New software helps Xalq bank focus on process and operational excellence to exceed customer expectations.",
+  },
+  {
+    image: "./aral-group-cover.jpg",
+    imageAlt: "Image of Aral Group",
+    logo: "./aral-group-logo.svg",
+    logoAlt: "Logo of Aral Group",
+    title:
+      "Implementation of Access Control System to Improve security at the facilities.",
+    overview:
+      "The company  needed to implement security features in their facilities that are more high tech and secure then simple key locks. They needed implementation of integrated access control systems in high security locations involving software or browser based door security, real-time digital video surveillance and many other features",
+    achievement:
+      "In the Aral group our team has integrated a new access control system, adapted for their security needs. Software of our partner has quite flexible, user friendly interface, and the highest level of functionality at the same time. Hardware we used for access control system is reliable and proven by many worldwide corporations and companies",
+  },
+];

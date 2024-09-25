@@ -13,6 +13,7 @@ import Container from "./Container.jsx";
 import SectionHeader from "./SectionHeader.jsx";
 import Statistics from "./Statistics.jsx";
 import StatisticItem from "./StatisticItem.jsx";
+import NavButton from "./NavButton.jsx";
 
 export {
   Header,
@@ -30,4 +31,5 @@ export {
   SectionHeader,
   Statistics,
   StatisticItem,
+  NavButton,
 };
