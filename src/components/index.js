@@ -14,6 +14,7 @@ import SectionHeader from "./SectionHeader.jsx";
 import Statistics from "./Statistics.jsx";
 import StatisticItem from "./StatisticItem.jsx";
 import NavButton from "./NavButton.jsx";
+import TestimonialItem from "./TestimonialItem.jsx";
 
 export {
   Header,
@@ -32,4 +33,5 @@ export {
   Statistics,
   StatisticItem,
   NavButton,
+  TestimonialItem,
 };

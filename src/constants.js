@@ -130,3 +130,30 @@ export const CASE_STUDIES = [
       "In the Aral group our team has integrated a new access control system, adapted for their security needs. Software of our partner has quite flexible, user friendly interface, and the highest level of functionality at the same time. Hardware we used for access control system is reliable and proven by many worldwide corporations and companies",
   },
 ];
+
+export const TESTIMONIALS = [
+  {
+    rating: 5,
+    name: "Gurban Mammadov",
+    role: "Head of Procurement",
+    message:
+      "Projects we worked on were delivered on time. The quality of the delivered goods or equipment was suitable for the project.",
+    image: "/gurban-mammadov.png",
+  },
+  {
+    rating: 5,
+    name: "Dadash Jafarov",
+    role: "Head of IT",
+    message:
+      "With the help of the Rabalon company's professional staff, we have achieved our goal on time and at a high level.",
+    image: "/dadash-jafarov.png",
+  },
+  {
+    rating: 5,
+    name: "Bahruz Sultanov",
+    role: "Head of IT",
+    message:
+      "With the help of dedicated cyber security solutions provided, we can easily manage the security of our data.",
+    image: "/ram-holding.png",
+  },
+];
