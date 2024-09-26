@@ -17,6 +17,7 @@ import NavButton from "./NavButton.jsx";
 import TestimonialItem from "./TestimonialItem.jsx";
 import ContactForm from "./ContactForm.jsx";
 import OfficeLocationCard from "./OfficeLocationCard.jsx";
+import TechPartners from "./TechPartners.jsx";
 
 export {
   Header,
@@ -38,4 +39,5 @@ export {
   TestimonialItem,
   ContactForm,
   OfficeLocationCard,
+  TechPartners,
 };

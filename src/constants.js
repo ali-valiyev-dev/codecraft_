@@ -178,3 +178,27 @@ export const CONTACT_DETAILS = [
     phone: "+994502613550",
   },
 ];
+
+export const PARTNER_COMPANY_LOGOS = [
+  { src: "/cisco-logo.png", alt: "Facebook" },
+  { src: "/ibm-logo.png", alt: "Facebook" },
+  { src: "/dingo-logo.png", alt: "Facebook" },
+  { src: "/sap-logo.png", alt: "Facebook" },
+  { src: "/oracle-logo.png", alt: "Facebook" },
+  { src: "/microsoft-logo.png", alt: "Facebook" },
+  { src: "/lenovo-logo.png", alt: "Facebook" },
+  { src: "/dell-emc-logo.png", alt: "Facebook" },
+  { src: "/mcafee-logo.png", alt: "Facebook" },
+  { src: "/vmware-logo.png", alt: "Facebook" },
+  { src: "/verint-logo.png", alt: "Facebook" },
+  { src: "/paloaltonetworks-logo.png", alt: "Facebook" },
+  { src: "/shopify-logo.png", alt: "Facebook" },
+  { src: "/riverbed-logo.png", alt: "Facebook" },
+  { src: "/veritas-technologies-logo.png", alt: "Facebook" },
+  { src: "/manage-engine-logo.png", alt: "Facebook" },
+  { src: "/fortinet-logo.png", alt: "Facebook" },
+  { src: "/canon-logo.png", alt: "Facebook" },
+  { src: "/qnap-logo.png", alt: "Facebook" },
+  { src: "/cyberark-logo.png", alt: "Facebook" },
+  { src: "/forcepoint-logo.png", alt: "Facebook" },
+];
