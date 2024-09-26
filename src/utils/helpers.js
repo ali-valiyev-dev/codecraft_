@@ -1,3 +1,5 @@
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
 const handleSmoothScroll = (event, targetId, setIsOpen) => {
   event.preventDefault();
   const targetElement = document.getElementById(targetId);
@@ -19,4 +21,9 @@ const scrollToTop = () => {
   });
 };
 
-export { handleSmoothScroll, scrollToTop };
+const formatPhoneNumber = phoneNumber => {
+  const phoneNumberObj = parsePhoneNumberFromString(phoneNumber, "US");
+  return phoneNumberObj ? phoneNumberObj.formatInternational() : phoneNumber;
+};
+
+export { handleSmoothScroll, scrollToTop, formatPhoneNumber };

@@ -7,8 +7,11 @@ import {
   NavLink,
   NavLinksWrapper,
 } from "../components";
+import { useNavigate } from "react-router-dom";
 
 const DesktopNavbar = () => {
+  const navigate = useNavigate();
+
   const [dropdown, setDropdown] = useState(null);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
@@ -51,9 +54,9 @@ const DesktopNavbar = () => {
         <Button
           title="Get In Touch"
           onClick={() => {
-            alert("Button clicked!");
+            navigate("/contacts");
           }}
-          alt="Get in touch button"
+          alt="Navigate to Contacts page"
         />
       </div>
     </>

@@ -1,13 +1,12 @@
 import MainLayout from "./layouts/MainLayout";
 import { Route, Routes } from "react-router-dom";
-
 import {
-  About,
-  Contacts,
-  Home,
-  Industries,
-  NotFound,
-  Solutions,
+  AboutPage,
+  ContactsPage,
+  HomePage,
+  IndustriesPage,
+  NotFoundPage,
+  SolutionsPage,
 } from "./pages";
 
 function App() {
@@ -18,32 +17,32 @@ function App() {
         element={<MainLayout />}>
         <Route
           index
-          element={<Home />}
+          element={<HomePage />}
         />
 
         <Route
           path="solutions/:id"
-          element={<Solutions />}
+          element={<SolutionsPage />}
         />
 
         <Route
           path="industries/:id"
-          element={<Industries />}
+          element={<IndustriesPage />}
         />
 
         <Route
           path="about"
-          element={<About />}
+          element={<AboutPage />}
         />
         <Route
           path="contacts"
-          element={<Contacts />}
+          element={<ContactsPage />}
         />
       </Route>
 
       <Route
         path="*"
-        element={<NotFound />}
+        element={<NotFoundPage />}
       />
     </Routes>
   );

@@ -1,8 +1,15 @@
-import Home from "./Home.jsx";
-import Solutions from "./Solutions.jsx";
-import Industries from "./Industries.jsx";
-import About from "./About.jsx";
-import Contacts from "./Contacts.jsx";
-import NotFound from "./NotFound.jsx";
+import HomePage from "./HomePage.jsx";
+import SolutionsPage from "./SolutionsPage.jsx";
+import IndustriesPage from "./IndustriesPage.jsx";
+import AboutPage from "./AboutPage.jsx";
+import ContactsPage from "./ContactsPage.jsx";
+import NotFoundPage from "./NotFoundPage.jsx";
 
-export { Home, Solutions, Industries, About, Contacts, NotFound };
+export {
+  HomePage,
+  SolutionsPage,
+  IndustriesPage,
+  AboutPage,
+  ContactsPage,
+  NotFoundPage,
+};

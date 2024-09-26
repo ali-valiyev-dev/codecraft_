@@ -157,3 +157,24 @@ export const TESTIMONIALS = [
     image: "/ram-holding.png",
   },
 ];
+
+export const CONTACT_DETAILS = [
+  {
+    countryFlag: "twemoji:flag-united-states",
+    location: "Rabalon USA",
+    address: "44679 Endicott Drive Ashburn, VA 20147",
+    addressUrl:
+      "https://www.google.com/maps?q=44679+Endicott+Drive+Ashburn,+VA+20147",
+    email: "info@rabalon.com",
+    phone: "+17037550073",
+  },
+  {
+    countryFlag: "twemoji:flag-azerbaijan",
+    location: "Rabalon USA",
+    address: "152 Haydar Aliyev Avenue, Baku, Azerbaijan, AZ1029",
+    addressUrl:
+      "https://www.google.com/maps?q=152+Haydar+Aliyev+Avenue,+Baku,+Azerbaijan,+AZ1029",
+    email: "info@rabalon.com",
+    phone: "+994502613550",
+  },
+];

@@ -15,6 +15,8 @@ import Statistics from "./Statistics.jsx";
 import StatisticItem from "./StatisticItem.jsx";
 import NavButton from "./NavButton.jsx";
 import TestimonialItem from "./TestimonialItem.jsx";
+import ContactForm from "./ContactForm.jsx";
+import OfficeLocationCard from "./OfficeLocationCard.jsx";
 
 export {
   Header,
@@ -34,4 +36,6 @@ export {
   StatisticItem,
   NavButton,
   TestimonialItem,
+  ContactForm,
+  OfficeLocationCard,
 };
