@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen overflow-hidden">
+      className="w-full flex justify-center overflow-hidden relative ">
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src="/rabalon-hero.mp4"
@@ -16,7 +16,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-primary-blue bg-opacity-70" />
 
-      <div className="relative flex items-center justify-center w-full h-full max-w-5xl">
+      <div className=" relative flex items-center justify-center h-screen max-w-5xl">
         <div className=" text-center text-neutral-white px-4 md:px-10 xl:px-16">
           <h1 className="text-4xl md:text-6xl">
             Your Tech Partner <br />

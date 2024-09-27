@@ -1,4 +1,6 @@
 export const NAV_LINKS = [
+  { href: "home", label: "Home" },
+
   {
     href: "null",
     label: "Solutions",
@@ -24,9 +26,16 @@ export const NAV_LINKS = [
       { href: "retail", label: "Retail" },
     ],
   },
-  { href: "tech_partners", label: "Our Tech Partners" },
-  { href: "case_studies", label: "Case Studies" },
-  { href: "about", label: "About Us" },
+  {
+    href: "null",
+    label: "Company",
+    dropdownItems: [
+      { href: "about", label: "About Us" },
+      { href: "blog", label: "Blog" },
+      { href: "career", label: "Career" },
+      { href: "contacts", label: "Contact Us" },
+    ],
+  },
 ];
 
 export const SOCIAL_LINKS = [
@@ -170,7 +179,7 @@ export const CONTACT_DETAILS = [
   },
   {
     countryFlag: "twemoji:flag-azerbaijan",
-    location: "Rabalon USA",
+    location: "Rabalon Azerbaijan",
     address: "152 Haydar Aliyev Avenue, Baku, Azerbaijan, AZ1029",
     addressUrl:
       "https://www.google.com/maps?q=152+Haydar+Aliyev+Avenue,+Baku,+Azerbaijan,+AZ1029",

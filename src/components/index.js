@@ -17,6 +17,7 @@ import NavButton from "./NavButton.jsx";
 import TestimonialItem from "./TestimonialItem.jsx";
 import ContactForm from "./ContactForm.jsx";
 import OfficeLocationCard from "./OfficeLocationCard.jsx";
+import FooterOfficeLocationDetails from "./FooterOfficeLocationDetails.jsx";
 import TechPartners from "./TechPartners.jsx";
 
 export {
@@ -40,4 +41,5 @@ export {
   ContactForm,
   OfficeLocationCard,
   TechPartners,
+  FooterOfficeLocationDetails,
 };
