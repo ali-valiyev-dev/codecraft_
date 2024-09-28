@@ -19,6 +19,7 @@ import ContactForm from "./ContactForm.jsx";
 import OfficeLocationCard from "./OfficeLocationCard.jsx";
 import FooterOfficeLocationDetails from "./FooterOfficeLocationDetails.jsx";
 import TechPartners from "./TechPartners.jsx";
+import FeaturedClients from "./FeaturedClients.jsx";
 
 export {
   Header,
@@ -42,4 +43,5 @@ export {
   OfficeLocationCard,
   TechPartners,
   FooterOfficeLocationDetails,
+  FeaturedClients,
 };

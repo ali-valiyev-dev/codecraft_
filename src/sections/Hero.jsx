@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import FeaturedClients from "../components/FeaturedClients";
 
 const Hero = () => {
   return (
@@ -16,8 +17,9 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-primary-blue bg-opacity-70" />
 
-      <div className=" relative flex items-center justify-center h-screen max-w-5xl">
-        <div className=" text-center text-neutral-white px-4 md:px-10 xl:px-16">
+      <div className="px-4 md:px-10 xl:px-0 relative flex flex-col items-center justify-center gap-40 h-screen max-w-5xl">
+        {/* Hero text */}
+        <div className=" text-center text-neutral-white">
           <h1 className="text-4xl md:text-6xl">
             Your Tech Partner <br />
             <span className="text-primary-lightBlue font-bold">
@@ -32,14 +34,19 @@ const Hero = () => {
             and implement existing solutions.
           </p>
         </div>
-        <div className="absolute bottom-10 uppercase text-neutral-white flex flex-col items-center justify-center">
-          <span>Scroll</span>
-          <Icon
-            icon="mdi:chevron-down"
-            width={32}
-            height={32}
-          />
-        </div>
+
+        {/* featured clients */}
+        <FeaturedClients />
+      </div>
+
+      {/* scroll down */}
+      <div className="absolute bottom-10 uppercase text-neutral-white flex flex-col items-center justify-center">
+        <span>Scroll</span>
+        <Icon
+          icon="mdi:chevron-down"
+          width={32}
+          height={32}
+        />
       </div>
     </section>
   );

@@ -38,6 +38,13 @@ export const NAV_LINKS = [
   },
 ];
 
+export const FEATURED_CLIENTS = [
+  { src: "/aral-group-white-logo.png", alt: "Xalq Bank logo" },
+  { src: "/ferrum-capital-white-logo.png", alt: "Xalq Bank logo" },
+  { src: "/ramco-systems-white-logo.png", alt: "Xalq Bank logo" },
+  { src: "/xalq-bank-white-logo.png", alt: "Xalq Bank logo" },
+];
+
 export const SOCIAL_LINKS = [
   {
     href: "https://www.facebook.com/rabalontech",
