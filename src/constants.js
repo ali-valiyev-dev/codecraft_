@@ -410,3 +410,195 @@ export const SOLUTIONS_DATA = [
     ],
   },
 ];
+
+export const INDUSTRIES_DATA = [
+  {
+    id: "public_sector",
+    headerTitle: "Public Sector",
+    headerSubtitle:
+      "We develop public sector IT solutions and software that integrate web services, mobile channels, and applications on a single platform.",
+
+    cardsData: [
+      {
+        icon: "mdi:chart-line",
+        title: "Faster & Efficient",
+        desc: "Enhancing Public Sector services through automation, decreasing bureaucratic issues, and enhancing governments’ reputation, while streamlining manual processes to increase effort and efficiency.",
+      },
+      {
+        icon: "mdi:check-decagram",
+        title: "Assuring Compliance",
+        desc: "Rabalon has been serving Public Sector for years providing innovative solutions that help with transparency & compliance with regulations.",
+      },
+      {
+        icon: "mdi:brain",
+        title: "Extensive Knowledge",
+        desc: "We rely on our in-depth expertise in creating innovative, fully integrated systems that include frontend and backend solutions for all Public Sector needs. At Rabalon we use top-notch Agile and customized solutions to serve public sectors.",
+      },
+    ],
+
+    accordionData: [
+      {
+        title: "Performance Management",
+        content:
+          "Using Performance Management software you’ll be able to track the performance of your employees, track goals and KPIs, and manage the progress of different projects. This software allows you to quickly analyze progress and allocate resources for different projects.",
+      },
+      {
+        title: "Communication & Employment Solutions",
+        content:
+          "Our Communication software allows you to transmit a large amount of information and updates securely and efficiently. Employment portals that help mass recruitments for government sectors.",
+      },
+      {
+        title: "Citizen Relationship Management",
+        content:
+          "Ask questions and provide suggestions that are then evaluated and used for planning future projects. This software will help you develop a bond with the public and serve them better.",
+      },
+      {
+        title: "Planning and Budgeting Software",
+        content:
+          "Customized complete tools that enable greater efficiency, transparency, and control in financial processes including financial projections, budgeting & transactions.",
+      },
+    ],
+  },
+  {
+    id: "healthcare",
+    headerTitle: "Healthcare",
+    headerSubtitle:
+      "We offer healthcare software development services that enable our clients to experience the edge of new technologies, provide great patient care, and create a robust and integrated healthcare ecosystem.",
+
+    cardsData: [
+      {
+        icon: "mdi:stethoscope",
+        title: "Better Patient Care",
+        desc: "Our Data Science healthcare solutions give you a bird’s-eye view of clinical processes and patient insights, allowing you to work towards personalized and preventative care.",
+      },
+      {
+        icon: "mdi:robot-outline",
+        title: "Automation and Analytics",
+        desc: "Automate crucial steps of your lab testing and save time on data collecting, processing, and analysis. So, you can invest your time more in providing excellent patient care.",
+      },
+      {
+        icon: "mdi:lock-check-outline",
+        title: "Keep Patient Data Secure",
+        desc: "Avoid leakage of confidential patient information by digitally organizing it with the help of blockchain technology.",
+      },
+    ],
+
+    accordionData: [
+      {
+        title: "Custom Mobile Healthcare Applications",
+        content:
+          "We understand the challenges in the healthcare industry and we are here to smoothen your journey with custom mobile healthcare applications. Our software experts in the healthcare industry will bring everything you need, from applications for healthcare practitioners; telehealth, billing, medical prescriptions, and record management to applications for patients; health monitoring, medication tracking, and healthy living and wellness in the palm of your hand.",
+      },
+      {
+        title: "Telemedicine",
+        content:
+          "Provide virtual service to your patients with our advanced custom-made telemedicine apps for report viewing, virtual consultations, and health tracking. Our experts will analyze your business needs, and then develop a roadmap that will help you adopt telemedicine solutions with robust data privacy and security mechanisms.",
+      },
+      {
+        title: "EMR/EHR Applications",
+        content:
+          "Custom EMR/EHR applications that will enable an electronic record management system. This will improve your efficiency, reduce costs, and help you go paperless.",
+      },
+      {
+        title: "Healthcare Data Analytics Solution",
+        content:
+          "Improve the quality of your clinical care with our data analytics solution. It will help access patient data and allow health systems to generate patterns and trends around diagnosis, treatment, and continued care. It will also enable you to access your actionable insights that will guide future interactions with patients, customers, and populations.",
+      },
+      {
+        title: "Healthcare Security",
+        content:
+          "The Healthcare industry is filled with cybersecurity-related issues. Cybersecurity in healthcare is an essential part as it involves protecting electronic information from unauthorized access, use, and disclosure. Our experts will develop software that will protect the confidentiality, integrity, and availability of information from hackers.",
+      },
+    ],
+  },
+  {
+    id: "hospitality",
+    headerTitle: "Hospitality",
+    headerSubtitle:
+      "We aim to develop custom software solutions to optimize your workflow, improve customer experience and meet ever-changing demands.",
+
+    cardsData: [
+      {
+        icon: "mdi:run-fast",
+        title: "Increase Productivity",
+        desc: "Rabalon helps you with automating task assignments, better order management, and a quick notification system that automates many processes eliminating 90% of human errors and increasing productivity.",
+      },
+      {
+        icon: "mdi:currency-usd",
+        title: "Lower Costs",
+        desc: "Our data analytics tools will help you develop reports providing you with better insights for future planning and budgeting.",
+      },
+      {
+        icon: "mdi:account-heart",
+        title: "Guest Satisfaction",
+        desc: "Our experts will help you develop a system to analyze customer demands and provide them with great customer service, personalized offers and promotions which in turn develop a bond between customer and company.",
+      },
+    ],
+
+    accordionData: [
+      {
+        title: "Hotel Management Software",
+        content:
+          "Whether you have a small hotel or a full-scale hotel chain, our experts will develop end-to-end custom-made hotel management solutions for you according to your business needs. Our bespoke software solutions will help you optimize your workflows and assign automated tasks, eliminating the need for human resources.",
+      },
+      {
+        title: "Customer Relation Management System",
+        content:
+          "A full-scale CRM system is needed for a successful hospitality business. Our CRM solutions will help you develop strong relations with your clients through loyalty programs, client feedback management, and statistics tracking. Having a strong relationship with clients guarantees a return on investment.",
+      },
+      {
+        icon: "mdi:file-document",
+        title: "Payment and Document Management System",
+        content:
+          "Inefficient management can cause you loss. Our experts will design a full-stack document and payment management system to automate your payments and manage your data in a centralized and secure way.",
+      },
+    ],
+  },
+  {
+    id: "retail",
+    headerTitle: "Retail",
+    headerSubtitle:
+      "Enabling retail businesses to digitize their offerings and reach a wider audience effectively.",
+
+    cardsData: [
+      {
+        icon: "mdi:store",
+        title: "Improve Conversions & Customer Retention",
+        desc: "Our expert team will analyze & develop customer journeys for your business that will help you convert leads to sales. Engage existing clients and get repeat sales.",
+      },
+      {
+        icon: "mdi:package-variant-closed",
+        title: "Automated Inventory",
+        desc: "Our data science experts will develop an automated inventory that will help in predicting future inventory investments on expected sales volumes, for better cost-efficiency.",
+      },
+      {
+        icon: "mdi:truck-outline",
+        title: "Supply Chain Management",
+        desc: "Automate supply chain functions with the latest cloud solutions. Add transparency to processes and find the loopholes in your daily operations.",
+      },
+    ],
+
+    accordionData: [
+      {
+        title: "Custom App Development For Retail",
+        content:
+          "We have a dedicated team that will develop a custom app for your business according to your needs. We will guide you through the whole process from beginning to implementation, providing proper training to your employees to help you scale up your business.",
+      },
+      {
+        title: "AR & VR Solutions",
+        content:
+          "Staff trainings, product configurations & in-store experience, all on Virtual Reality. We can help you develop the latest VR apps customized to your business needs. With our Augmented Reality Solutions, you can now showcase product variations and enhance customer experience.",
+      },
+      {
+        title: "Integrated Retail POS System",
+        content:
+          "We will help you implement the best POS solutions for your retail business. We are certified Shopify partners. Your integrated system will provide capabilities such as scanning a barcode, making a purchase order, or printing a receipt online.",
+      },
+      {
+        title: "Custom Logistic Management System",
+        content:
+          "Our experts in blockchain, cloud software, and analytics will help develop a foolproof custom logistic management system for your retail business.",
+      },
+    ],
+  },
+];
