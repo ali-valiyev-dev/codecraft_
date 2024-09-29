@@ -20,6 +20,7 @@ import OfficeLocationCard from "./OfficeLocationCard.jsx";
 import FooterOfficeLocationDetails from "./FooterOfficeLocationDetails.jsx";
 import TechPartners from "./TechPartners.jsx";
 import FeaturedClients from "./FeaturedClients.jsx";
+import Accordion from "./Accordion.jsx";
 
 export {
   Header,
@@ -44,4 +45,5 @@ export {
   TechPartners,
   FooterOfficeLocationDetails,
   FeaturedClients,
+  Accordion,
 };

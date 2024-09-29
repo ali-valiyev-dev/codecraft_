@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { Button, Container, SectionHeader, Statistics } from "../components";
+import {
+  Button,
+  Container,
+  SectionHeader,
+  Statistics,
+  TechPartners,
+} from "../components";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
@@ -81,6 +87,7 @@ const About = () => {
         </div>
 
         <Statistics />
+        <TechPartners />
       </div>
     </Container>
   );

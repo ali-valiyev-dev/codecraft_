@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Container from "./Container";
 import SectionHeader from "./SectionHeader";
 import { PARTNER_COMPANY_LOGOS } from "../constants";
 
@@ -14,7 +13,7 @@ const TechPartners = () => {
   }, []);
 
   return (
-    <Container id="case_studies">
+    <div className="bg-gray-300 w-full mx-auto max-w-screen-2xl">
       <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* header content */}
         <SectionHeader
@@ -39,7 +38,7 @@ const TechPartners = () => {
           </ul>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

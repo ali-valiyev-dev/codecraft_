@@ -1,4 +1,3 @@
-import { TechPartners } from "../components";
 import {
   About,
   CaseStudies,
@@ -16,7 +15,6 @@ const HomePage = () => {
       <Hero />
       <Solutions />
       <About />
-      <TechPartners />
       <CaseStudies />
       <Testimonials />
       <Contacts />

@@ -4,9 +4,9 @@ import Footer from "../sections/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="bg-primary-blue w-full flex flex-col items-center relative">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="bg-primary-blue w-full">
+      <main className="flex-1">
         <Outlet />
       </main>
       <Footer />
