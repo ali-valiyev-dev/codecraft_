@@ -1,19 +1,5 @@
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 
-const handleSmoothScroll = (event, targetId, setIsOpen) => {
-  event.preventDefault();
-  const targetElement = document.getElementById(targetId);
-  if (targetElement) {
-    targetElement.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-  if (setIsOpen) {
-    setIsOpen(false);
-  }
-};
-
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
@@ -26,4 +12,4 @@ const formatPhoneNumber = phoneNumber => {
   return phoneNumberObj ? phoneNumberObj.formatInternational() : phoneNumber;
 };
 
-export { handleSmoothScroll, scrollToTop, formatPhoneNumber };
+export { scrollToTop, formatPhoneNumber };

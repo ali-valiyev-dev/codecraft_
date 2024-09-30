@@ -1,12 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import { handleSmoothScroll } from "../utils/helpers";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 
 const NavLink = ({
   href,
   label,
-  setIsOpen,
   dropdownItems,
   openDropdown,
   handleDropdownToggle,
@@ -28,12 +27,11 @@ const NavLink = ({
   return (
     <li className="relative ">
       {isLink ? (
-        <a
-          href={href}
-          className="text-xl md:text-2xl xl:text-xl text-nowrap flex uppercase"
-          onClick={e => handleSmoothScroll(e, href, setIsOpen)}>
+        <Link
+          to={href}
+          className="text-xl md:text-2xl xl:text-xl text-nowrap flex uppercase">
           {label}
-        </a>
+        </Link>
       ) : (
         <div
           className="text-xl md:text-2xl xl:text-xl text-nowrap flex cursor-pointer items-center uppercase"
@@ -62,12 +60,11 @@ const NavLink = ({
             <li
               key={subIndex}
               className=" pl-3 py-3">
-              <a
-                href={subLink.href}
-                className="text-lg md:text-xl lg:text-lg"
-                onClick={e => handleSmoothScroll(e, subLink.href, setIsOpen)}>
+              <Link
+                to={subLink.href}
+                className="text-lg md:text-xl lg:text-lg">
                 {subLink.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

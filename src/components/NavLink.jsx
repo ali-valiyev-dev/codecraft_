@@ -1,19 +1,18 @@
-import { handleSmoothScroll } from "../utils/helpers";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
-const NavLink = ({ href, label, setIsOpen, dropdownItems }) => {
+const NavLink = ({ href, label, dropdownItems }) => {
   const isLink = href && href !== "null";
 
   return (
     <li className="relative">
       {isLink ? (
-        <a
-          href={href}
-          className="text-xl text-nowrap flex items-center"
-          onClick={e => handleSmoothScroll(e, href, setIsOpen)}>
+        <Link
+          to={href}
+          className="text-xl text-nowrap flex items-center">
           {label}
-        </a>
+        </Link>
       ) : (
         <div className="text-xl text-nowrap flex items-center cursor-pointer">
           {label}
@@ -34,7 +33,6 @@ const NavLink = ({ href, label, setIsOpen, dropdownItems }) => {
 NavLink.propTypes = {
   href: PropTypes.string,
   label: PropTypes.string.isRequired,
-  setIsOpen: PropTypes.func,
   dropdownItems: PropTypes.arrayOf(
     PropTypes.shape({
       href: PropTypes.string.isRequired,

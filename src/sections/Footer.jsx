@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FooterOfficeLocationDetails, Logo, SocialLink } from "../components";
 import { CONTACT_DETAILS, NAV_LINKS, SOCIAL_LINKS } from "../constants";
 
@@ -39,20 +40,20 @@ const Footer = () => {
                       {navItem.dropdownItems ? (
                         navItem.dropdownItems.map(dropdown => (
                           <li key={dropdown.label}>
-                            <a
-                              href={dropdown.href}
+                            <Link
+                              to={dropdown.href}
                               className="text-gray-600 hover:text-gray-800 text-nowrap">
                               {dropdown.label}
-                            </a>
+                            </Link>
                           </li>
                         ))
                       ) : (
                         <li>
-                          <a
-                            href={navItem.href}
+                          <Link
+                            to={navItem.href}
                             className="text-gray-600 hover:text-gray-800">
                             {navItem.label}
-                          </a>
+                          </Link>
                         </li>
                       )}
                     </ul>
@@ -77,11 +78,11 @@ const Footer = () => {
         <div className="mt-5 border-t pt-4 flex gap-5 items-center text-gray-500 text-sm">
           <span className="text-nowrap">&copy; 2024 Rabalon</span>
 
-          <a
-            href="#"
+          <Link
+            to="/"
             className="hover:text-gray-800 text-nowrap">
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

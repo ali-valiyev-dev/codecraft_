@@ -1,29 +1,32 @@
 export const NAV_LINKS = [
-  { href: "home", label: "Home" },
+  { href: "/", label: "Home" },
 
   {
     href: "null",
     label: "Solutions",
     dropdownItems: [
-      { href: "software_development", label: "Software Development" },
-      { href: "cloud_solutions", label: "Cloud Solutions" },
+      { href: "solutions/software_development", label: "Software Development" },
+      { href: "solutions/cloud_solutions", label: "Cloud Solutions" },
       {
-        href: "data_science_and_artificial_intelligence",
+        href: "solutions/data_science_and_artificial_intelligence",
         label: "Data Science & AI",
       },
-      { href: "infrastructure_solutions", label: "Infrastructure Solutions" },
-      { href: "iot_solutions", label: "IoT Solutions" },
-      { href: "security_solutions", label: "Security Solutions" },
+      {
+        href: "solutions/infrastructure_solutions",
+        label: "Infrastructure Solutions",
+      },
+      { href: "solutions/iot_solutions", label: "IoT Solutions" },
+      { href: "solutions/security_solutions", label: "Security Solutions" },
     ],
   },
   {
     href: "null",
     label: "Industries",
     dropdownItems: [
-      { href: "public_sector", label: "Public Sector" },
-      { href: "healthcare", label: "Healthcare" },
-      { href: "hospitality", label: "Hospitality" },
-      { href: "retail", label: "Retail" },
+      { href: "industries/public_sector", label: "Public Sector" },
+      { href: "industries/healthcare", label: "Healthcare" },
+      { href: "industries/hospitality", label: "Hospitality" },
+      { href: "industries/retail", label: "Retail" },
     ],
   },
   {
@@ -31,8 +34,8 @@ export const NAV_LINKS = [
     label: "Company",
     dropdownItems: [
       { href: "about", label: "About Us" },
-      { href: "blog", label: "Blog" },
-      { href: "career", label: "Career" },
+      { href: "/", label: "Blog" },
+      { href: "/", label: "Career" },
       { href: "contacts", label: "Contact Us" },
     ],
   },
