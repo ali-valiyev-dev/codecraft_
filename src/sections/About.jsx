@@ -14,7 +14,7 @@ const About = () => {
   const navigate = useNavigate();
 
   return (
-    <Container id="about">
+    <Container>
       <div className="flex flex-col items-center justify-center gap-16 ">
         {/* header content */}
         <SectionHeader

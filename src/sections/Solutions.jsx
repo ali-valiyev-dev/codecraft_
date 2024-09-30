@@ -3,7 +3,7 @@ import { SOLUTIONS } from "../constants";
 
 const Solutions = () => {
   return (
-    <Container id="solutions">
+    <Container>
       <div className="flex flex-col items-center justify-center gap-16">
         <SectionHeader
           title="IT Solutions"

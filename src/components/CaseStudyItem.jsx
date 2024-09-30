@@ -13,7 +13,7 @@ const CaseStudyItem = ({
   return (
     <div className="w-full h-full flex flex-col lg:flex-row gap-6 xl:gap-12">
       {/* leftside content (img) */}
-      <div className="lg:w-1/2 max-h-[510px] rounded-lg overflow-hidden borders">
+      <div className="lg:w-1/2 max-h-[510px] rounded-lg overflow-hidden ">
         <img
           className="w-full h-full object-cover"
           src={image}

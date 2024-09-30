@@ -9,9 +9,7 @@ import {
 
 const HomePage = () => {
   return (
-    <div
-      id="home"
-      className="bg-primary-blue w-full h-full flex flex-col items-center justify-center">
+    <div className="bg-primary-blue w-full h-full flex flex-col items-center justify-center">
       <Hero />
       <Solutions />
       <About />

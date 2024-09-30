@@ -25,16 +25,16 @@ const IndustriesPage = () => {
 
   if (!industries) return null;
 
-  const { headerTitle, headerSubtitle, cardsData, accordionData } = industries;
+  const { pageTitle, pageSubtitle, cardsData, accordionData } = industries;
 
   return (
-    <Container id="industries">
+    <Container>
       {/* main content */}
       <div className="space-y-16">
         {/* section header */}
         <SectionHeader
-          title={headerTitle}
-          subtitle={headerSubtitle}
+          title={pageTitle}
+          subtitle={pageSubtitle}
         />
 
         {/* industry cards */}
@@ -50,10 +50,10 @@ const IndustriesPage = () => {
         {/* accordion */}
         <div className="space-y-6">
           <h2 className="text-4xl text-blue-500 font-semibold">
-            {`Our ${headerTitle}`}
+            {`Our ${pageTitle}`}
           </h2>
 
-          <Accordion solutions={accordionData} />
+          <Accordion data={accordionData} />
         </div>
 
         {/* tech partners */}

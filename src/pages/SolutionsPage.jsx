@@ -23,18 +23,17 @@ const SolutionsPage = () => {
 
   if (!solution) return null;
 
-  const { headerTitle, headerSubtitle, img, title, desc, accordionData } =
-    solution;
+  const { pageTitle, pageSubtitle, img, title, desc, accordionData } = solution;
 
   return (
-    <Container id="solutions">
+    <Container>
       <div className="space-y-16">
         {/* header with image */}
         <div className="flex flex-col items-center justify-center gap-8 ">
           {/* section header */}
           <SectionHeader
-            title={headerTitle}
-            subtitle={headerSubtitle}
+            title={pageTitle}
+            subtitle={pageSubtitle}
           />
 
           {/* main content */}
@@ -64,7 +63,7 @@ const SolutionsPage = () => {
               <img
                 className="w-full h-full object-cover"
                 src={img}
-                alt={`${headerTitle} Cover`}
+                alt={`${pageTitle} Cover`}
               />
             </div>
           </div>
@@ -73,10 +72,10 @@ const SolutionsPage = () => {
         {/* accordion */}
         <div className="space-y-6">
           <h2 className="text-4xl text-blue-500 font-semibold">
-            {`Our ${headerTitle}`}
+            {`Our ${pageTitle}`}
           </h2>
 
-          <Accordion solutions={accordionData} />
+          <Accordion data={accordionData} />
         </div>
 
         {/* tech partners */}

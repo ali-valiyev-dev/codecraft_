@@ -225,8 +225,8 @@ export const PARTNER_COMPANY_LOGOS = [
 export const SOLUTIONS_DATA = [
   {
     id: "software_development",
-    headerTitle: "Software Development",
-    headerSubtitle:
+    pageTitle: "Software Development",
+    pageSubtitle:
       "We offer tailor-made software development solutions to help your business grow",
     img: "/software-development-cover.jpg",
     title:
@@ -257,8 +257,8 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "cloud_solutions",
-    headerTitle: "Cloud Solutions",
-    headerSubtitle:
+    pageTitle: "Cloud Solutions",
+    pageSubtitle:
       "Transform your cloud experience with public & private cloud solutions",
     img: "/cloud-solutions-cover.jpg",
     title:
@@ -289,8 +289,8 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "data_science_and_artificial_intelligence",
-    headerTitle: "Data Science & AI Solutions",
-    headerSubtitle:
+    pageTitle: "Data Science & AI Solutions",
+    pageSubtitle:
       "Revolutionize your business by turning big data into meaningful insights with Rabalon’s Data Science and AI solutions.",
     img: "/data-science-and-artificial-intelligence-cover.jpg",
     title: "Solve complex problems fast & Increase Business Efficiency",
@@ -316,8 +316,8 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "infrastructure_solutions",
-    headerTitle: "Infrastructure Solutions",
-    headerSubtitle:
+    pageTitle: "Infrastructure Solutions",
+    pageSubtitle:
       "IT infrastructure solutions that are secure, flexible, and reliable that aid businesses in significantly reducing costs and boosting revenues",
     img: "/infrastructure-solutions-cover.jpg",
     title: "Focus more on your core business & less on",
@@ -348,8 +348,8 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "iot_solutions",
-    headerTitle: "IoT Solutions",
-    headerSubtitle:
+    pageTitle: "IoT Solutions",
+    pageSubtitle:
       "Connecting the physical and digital worlds to develop an intelligent ecosystem that adds value to your business.",
     img: "/iot-solutions-cover.jpg",
     title:
@@ -381,8 +381,8 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "security_solutions",
-    headerTitle: "Cyber Security Solutions",
-    headerSubtitle:
+    pageTitle: "Cyber Security Solutions",
+    pageSubtitle:
       "Secure and strengthen your enterprise with Rabalon’s integrated network security solutions.",
     img: "/security-solutions-cover.jpg",
     title:
@@ -417,8 +417,8 @@ export const SOLUTIONS_DATA = [
 export const INDUSTRIES_DATA = [
   {
     id: "public_sector",
-    headerTitle: "Public Sector",
-    headerSubtitle:
+    pageTitle: "Public Sector",
+    pageSubtitle:
       "We develop public sector IT solutions and software that integrate web services, mobile channels, and applications on a single platform.",
 
     cardsData: [
@@ -464,8 +464,8 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "healthcare",
-    headerTitle: "Healthcare",
-    headerSubtitle:
+    pageTitle: "Healthcare",
+    pageSubtitle:
       "We offer healthcare software development services that enable our clients to experience the edge of new technologies, provide great patient care, and create a robust and integrated healthcare ecosystem.",
 
     cardsData: [
@@ -516,8 +516,8 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "hospitality",
-    headerTitle: "Hospitality",
-    headerSubtitle:
+    pageTitle: "Hospitality",
+    pageSubtitle:
       "We aim to develop custom software solutions to optimize your workflow, improve customer experience and meet ever-changing demands.",
 
     cardsData: [
@@ -559,8 +559,8 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "retail",
-    headerTitle: "Retail",
-    headerSubtitle:
+    pageTitle: "Retail",
+    pageSubtitle:
       "Enabling retail businesses to digitize their offerings and reach a wider audience effectively.",
 
     cardsData: [

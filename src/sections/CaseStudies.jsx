@@ -30,7 +30,7 @@ const CaseStudies = () => {
   }, [currentIndex]);
 
   return (
-    <Container id="case_studies">
+    <Container>
       <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* header content */}
         <SectionHeader

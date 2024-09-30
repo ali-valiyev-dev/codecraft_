@@ -3,9 +3,7 @@ import FeaturedClients from "../components/FeaturedClients";
 
 const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="w-full flex justify-center overflow-hidden relative ">
+    <section className="w-full flex justify-center overflow-hidden relative ">
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src="/rabalon-hero.mp4"

@@ -18,7 +18,7 @@ const StatisticItem = ({ label, total }) => {
         snap: { innerHTML: 1 },
         onComplete: () => {
           const formattedTotal =
-            total > 1000 ? `${(total / 1000).toFixed(0)}K` : `${total}`;
+            total >= 1000 ? `${(total / 1000).toFixed(0)}K` : `${total}`;
           valueRef.current.innerHTML = formattedTotal;
           setIsLoaded(true);
         },

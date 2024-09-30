@@ -8,7 +8,7 @@ import { CONTACT_DETAILS } from "../constants";
 
 const Contacts = () => {
   return (
-    <Container id="contacts">
+    <Container>
       <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* section header */}
         <SectionHeader
