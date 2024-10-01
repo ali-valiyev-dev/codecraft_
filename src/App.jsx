@@ -38,12 +38,11 @@ function App() {
           path="contacts"
           element={<ContactsPage />}
         />
+        <Route
+          path="*"
+          element={<NotFoundPage />}
+        />
       </Route>
-
-      <Route
-        path="*"
-        element={<NotFoundPage />}
-      />
     </Routes>
   );
 }
