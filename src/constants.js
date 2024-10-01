@@ -48,6 +48,24 @@ export const FEATURED_CLIENTS = [
   { src: "/xalq-bank-white-logo.png", alt: "Xalq Bank logo" },
 ];
 
+export const TEAM = [
+  {
+    img: "/ramin-iskenderov.jpg",
+    name: "Ramin Iskandarov",
+    position: "Founder / CEO",
+  },
+  {
+    img: "/mahir-iskender.jpg",
+    name: "Mahir Iskender",
+    position: "Co-Founder",
+  },
+  {
+    img: "/sakina-iskender.jpg",
+    name: "Sakina Iskender",
+    position: "COO",
+  },
+];
+
 export const SOCIAL_LINKS = [
   {
     href: "https://www.facebook.com/rabalontech",

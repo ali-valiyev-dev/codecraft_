@@ -22,6 +22,7 @@ import TechPartners from "./TechPartners.jsx";
 import FeaturedClients from "./FeaturedClients.jsx";
 import Accordion from "./Accordion.jsx";
 import IndustryCard from "./IndustryCard.jsx";
+import MemberCard from "./MemberCard.jsx";
 
 export {
   Header,
@@ -48,4 +49,5 @@ export {
   FeaturedClients,
   Accordion,
   IndustryCard,
+  MemberCard,
 };
