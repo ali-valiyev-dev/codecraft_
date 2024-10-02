@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 const MemberCard = ({ img, name, position }) => {
   return (
-    <div className="max-w-80 lg:max-w-96 flex flex-col px-5 py-6 rounded-xl bg-[#232558] justify-between border border-primary-blue">
-      <div className="space-y-9">
+    <div className="max-w-80 lg:max-w-96 flex flex-col px-5 py-6 rounded-xl bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
+      <div className="space-y-5">
         {/* memeber image */}
         <div className=" rounded-md overflow-hidden">
           <img
@@ -16,14 +16,10 @@ const MemberCard = ({ img, name, position }) => {
         {/* memeber details */}
         <div className="flex flex-col gap-2">
           {/* name */}
-          <h3 className="font-semibold text-xl bg-gradient-to-r from-neutral-white to-neutral-cyanBluishGray bg-clip-text text-transparent">
-            {name}
-          </h3>
+          <h3 className="font-semibold text-2xl">{name}</h3>
 
           {/* position */}
-          <span className="text-lg text-neutral-cyanBluishGray">
-            {position}
-          </span>
+          <span className="text-xl text-neutral-500">{position}</span>
         </div>
       </div>
     </div>

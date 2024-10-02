@@ -23,19 +23,19 @@ const Accordion = ({ data }) => {
         {data.map((data, index) => (
           <div
             key={index}
-            className="border-b border-blue-300">
+            className="border-b border-primary-blue">
             {/* title */}
             <div
               onClick={() => toggleIndex(index)}
               className={`cursor-pointer py-4 flex items-center justify-between transition-all duration-300 ${
-                activeIndex === index ? "text-blue-500" : "text-gray-900"
+                activeIndex === index ? "text-primary-blue" : "text-gray-900"
               }`}>
               <span className="text-xl font-semibold">{data.title}</span>
 
               <span
                 className={`transform transition-transform duration-300 ${
                   activeIndex === index
-                    ? "-rotate-45 text-blue-500"
+                    ? "-rotate-45 text-primary-blue"
                     : "rotate-0"
                 }`}>
                 <Icon
@@ -51,7 +51,7 @@ const Accordion = ({ data }) => {
               ref={el => (contentRefs.current[index] = el)}
               style={{ maxHeight: getHeight(index) }}
               className={`overflow-hidden transition-max-height duration-500 ease-in-out`}>
-              <div className="p-4 text-gray-600 lg:hidden">{data.content}</div>
+              <p className="p-4 text-neutral-500 lg:hidden">{data.content}</p>
             </div>
           </div>
         ))}
@@ -59,10 +59,10 @@ const Accordion = ({ data }) => {
 
       {/* rightside (content for larger screens) */}
       <div className="hidden lg:block w-full lg:w-1/2 transition-all duration-300 ease-in-out space-y-4">
-        <h2 className="w-max text-xl text-nowrap font-semibold border-b border-blue-300 text-gray-900 py-5">
+        <h2 className="w-max text-xl text-nowrap font-semibold border-b border-primary-blue text-primary-blue py-5">
           {data[activeIndex]?.title || data[0]?.title}
         </h2>
-        <p className="text-gray-600">
+        <p className="text-neutral-500 text-lg">
           {data[activeIndex]?.content || data[0]?.content}
         </p>
       </div>

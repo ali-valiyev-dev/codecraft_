@@ -23,7 +23,7 @@ const CaseStudyItem = ({
 
       {/* rightside content */}
       <div className="w-full lg:w-1/2 flex flex-col gap-12">
-        <div className="lg:text-lg xl:text-xl text-neutral-white">
+        <div className="lg:text-lg xl:text-xl text-primary-blue">
           <div className="flex flex-col gap-6">
             <div className="">
               <img
@@ -32,13 +32,13 @@ const CaseStudyItem = ({
                 alt={logoAlt}
               />
             </div>
-            <h3 className="text-2xl font-medium">{title}</h3>
+            <h3 className="text-2xl font-semibold">{title}</h3>
           </div>
 
-          <h4 className="mt-5 text-neutral-cyanBluishGray">Overview</h4>
+          <h4 className="mt-5 text-neutral-500">Overview</h4>
           <p className="mt-1">{overview}</p>
 
-          <h4 className="mt-5 text-neutral-cyanBluishGray">
+          <h4 className="mt-5 text-neutral-500">
             {index === 0 ? "What we did?" : "Acheivement"}
           </h4>
           <p className="mt-1">{achievement}</p>

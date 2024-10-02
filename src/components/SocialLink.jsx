@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 const SocialLink = ({ href, icon, alt }) => (
   <a
-    className="text-xl xl:text-2xl text-[#97A1AF] hover:text-primary-blue transition-colors duration-300 ease-in-out "
+    className="text-xl xl:text-2xl text-neutral-white"
     href={href}
     target="_blank"
     aria-label={alt}>

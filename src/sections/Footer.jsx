@@ -4,8 +4,8 @@ import { CONTACT_DETAILS, NAV_LINKS, SOCIAL_LINKS } from "../constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-300 w-full ">
-      <div className=" mx-auto max-w-screen-2xl py-5 px-4 md:px-10 xl:px-16">
+    <footer className="bg-primary-blue w-full text-neutral-white">
+      <div className="mx-auto max-w-screen-2xl py-5 px-4 md:px-10 xl:px-16">
         {/* Main Footer Content */}
         <div className=" flex flex-col xl:flex-row gap-y-5 items-start">
           {/* Logo and Tagline Section */}
@@ -42,7 +42,7 @@ const Footer = () => {
                           <li key={dropdown.label}>
                             <Link
                               to={dropdown.href}
-                              className="text-gray-600 hover:text-gray-800 text-nowrap">
+                              className="text-neutral-300 hover:text-neutral-white text-nowrap">
                               {dropdown.label}
                             </Link>
                           </li>
@@ -51,7 +51,7 @@ const Footer = () => {
                         <li>
                           <Link
                             to={navItem.href}
-                            className="text-gray-600 hover:text-gray-800">
+                            className="text-neutral-300 hover:text-neutral-white text-nowrap">
                             {navItem.label}
                           </Link>
                         </li>
@@ -75,12 +75,12 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-5 border-t pt-4 flex gap-5 items-center text-gray-500 text-sm">
+        <div className="mt-5 border-t pt-4 flex gap-5 items-center text-nowrap text-sm">
           <span className="text-nowrap">&copy; 2024 Rabalon</span>
 
           <Link
             to="/"
-            className="hover:text-gray-800 text-nowrap">
+            className="text-neutral-300 hover:text-neutral-white">
             Privacy Policy
           </Link>
         </div>

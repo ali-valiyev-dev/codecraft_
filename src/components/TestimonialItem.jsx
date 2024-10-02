@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 const TestimonialItem = ({ rating, name, role, message, image }) => {
   return (
-    <div className="max-w-sm flex flex-col justify-between px-3 py-6 bg-white rounded-lg">
+    <div className="max-w-sm flex flex-col justify-between px-3 py-6 border border-primary-dark-blue bg-neutral-white rounded-lg">
       {/* rating */}
       <div className="flex">
         {Array.from({ length: rating }).map((_, index) => (
@@ -14,14 +14,16 @@ const TestimonialItem = ({ rating, name, role, message, image }) => {
               icon={"mdi:star"}
               width={24}
               height={24}
-              className="text-primary-vividCyanBlue"
+              className="text-primary-light-blue"
             />
           </div>
         ))}
       </div>
 
       {/* message */}
-      <p className="text-gray-700 lg:text-lg my-5">&quot;{message}&quot;</p>
+      <p className="text-primary-very-dark-blue lg:text-lg my-5">
+        &quot;{message}&quot;
+      </p>
 
       {/* author */}
       <div className="flex items-center flex-nowrap gap-3">
@@ -31,8 +33,10 @@ const TestimonialItem = ({ rating, name, role, message, image }) => {
           className="w-20 h-20 rounded-full"
         />
         <div>
-          <h3 className="lg:text-lg font-extrabold">{name}</h3>
-          <p className="text-gray-500 text-xs">{role}</p>
+          <h3 className="text-primary-very-dark-blue lg:text-lg font-extrabold">
+            {name}
+          </h3>
+          <p className="text-neutral-500 text-sm">{role}</p>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ const FooterOfficeLocationDetails = ({
             href={addressUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-gray-600 hover:text-gray-800">
+            className="hover:underline text-neutral-300 hover:text-neutral-white">
             {address}
           </a>
         </li>
@@ -37,7 +37,7 @@ const FooterOfficeLocationDetails = ({
           />
           <a
             href="mailto:+7037550073"
-            className="hover:underline text-gray-600 hover:text-gray-800">
+            className="hover:underline text-neutral-300 hover:text-neutral-white text-nowrap">
             {email}
           </a>
         </li>
@@ -50,7 +50,7 @@ const FooterOfficeLocationDetails = ({
           />
           <a
             href={`tel:${phone}`}
-            className="hover:underline text-gray-600 hover:text-gray-800">
+            className="hover:underline text-neutral-300 hover:text-neutral-white text-nowrap">
             {formatPhoneNumber(phone)}
           </a>
         </li>

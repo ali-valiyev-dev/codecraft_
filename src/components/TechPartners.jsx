@@ -13,7 +13,7 @@ const TechPartners = () => {
   }, []);
 
   return (
-    <div className="bg-gray-300 w-full mx-auto max-w-screen-2xl">
+    <div className="w-full mx-auto max-w-screen-2xl">
       <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* header content */}
         <SectionHeader

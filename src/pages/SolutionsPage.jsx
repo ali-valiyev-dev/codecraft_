@@ -41,7 +41,7 @@ const SolutionsPage = () => {
             {/* leftside content */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
               {/* text content */}
-              <h1 className="text-2xl lg:text-3xl xl:text-4xl text-blue-500 font-semibold">
+              <h1 className="text-2xl lg:text-3xl xl:text-4xl text-primary-blue font-semibold">
                 {title}
               </h1>
 
@@ -71,7 +71,7 @@ const SolutionsPage = () => {
 
         {/* accordion */}
         <div className="space-y-6">
-          <h2 className="text-4xl text-blue-500 font-semibold">
+          <h2 className="text-4xl text-primary-blue font-semibold">
             {`Our ${pageTitle}`}
           </h2>
 

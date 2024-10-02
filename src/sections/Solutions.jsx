@@ -10,7 +10,7 @@ const Solutions = () => {
           subtitle="Excellence Redefined: Unleashing Tailored Solutions for Your Success Journey."
         />
 
-        <div className="flex flex-wrap items-stretch justify-center gap-6">
+        <div className="flex flex-wrap items-stretch justify-center gap-5">
           {SOLUTIONS.map((solution, index) => (
             <SolutionCard
               key={index}

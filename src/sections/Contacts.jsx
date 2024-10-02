@@ -17,16 +17,16 @@ const Contacts = () => {
         />
 
         {/* main content */}
-        <div className="w-full flex flex-col-reverse lg:flex-row gap-6 xl:gap-12 text-white ">
+        <div className="w-full flex flex-col-reverse lg:flex-row gap-6 xl:gap-12 text-primary-very-dark-blue ">
           {/*contact form */}
 
           <ContactForm />
 
           {/* contact details */}
-          <div className="w-full lg:w-1/2 space-y-12 text-white">
+          <div className="w-full lg:w-1/2 space-y-12 ">
             {/* contact details header */}
             <div className=" space-y-4">
-              <p className="text-neutral-white text-xl lg:text-2xl xl:text-3xl font-semibold">
+              <p className=" text-xl lg:text-2xl xl:text-3xl font-semibold">
                 Reach out to our consultants
               </p>
               <p className="lg:text-xl">

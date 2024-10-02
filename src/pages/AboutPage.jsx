@@ -71,7 +71,7 @@ const AboutPage = () => {
                   value to our clients and help in business growth.
                 </p>
                 <div>
-                  <h3 className="font-semibold text-neutral-cyanBluishGray">
+                  <h3 className="font-semibold text-neutral-500">
                     Our Mission
                   </h3>
                   <p>
@@ -81,9 +81,7 @@ const AboutPage = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-neutral-cyanBluishGray">
-                    Our Vision
-                  </h3>
+                  <h3 className="font-semibold text-neutral-500">Our Vision</h3>
 
                   <p>
                     Our Vision is to enable our clients to discover the digital

@@ -32,24 +32,11 @@ const StatisticItem = ({ label, total }) => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-2 px-2">
-      <div className="flex items-center justify-center">
-        <h3
-          ref={valueRef}
-          className="text-4xl text-white">
-          0
-        </h3>
-        {isLoaded && (
-          <Icon
-            icon={"mdi:plus"}
-            width={36}
-            height={36}
-            className="text-primary-vividCyanBlue"
-          />
-        )}
+      <div className="flex items-center justify-center text-4xl font-medium text-primary-blue">
+        <h3 ref={valueRef}>0</h3>
+        {isLoaded && <Icon icon={"mdi:plus"} />}
       </div>
-      <p className="lg:text-lg text-neutral-cyanBluishGray text-nowrap">
-        {label}
-      </p>
+      <p className="lg:text-lg text-neutral-500 text-nowrap">{label}</p>
     </div>
   );
 };

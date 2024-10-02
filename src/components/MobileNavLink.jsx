@@ -9,6 +9,7 @@ const NavLink = ({
   dropdownItems,
   openDropdown,
   handleDropdownToggle,
+  setIsOpen,
 }) => {
   const isDropdownOpen = openDropdown === label;
   const dropdownRef = useRef(null);
@@ -25,16 +26,19 @@ const NavLink = ({
   const isLink = href && href !== "null";
 
   return (
-    <li className="relative ">
+    <li className="relative text-xl md:text-2xl xl:text-xl ">
       {isLink ? (
         <Link
           to={href}
-          className="text-xl md:text-2xl xl:text-xl text-nowrap flex uppercase">
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          className="text-nowrap flex uppercase">
           {label}
         </Link>
       ) : (
         <div
-          className="text-xl md:text-2xl xl:text-xl text-nowrap flex cursor-pointer items-center uppercase"
+          className="text-nowrap flex cursor-pointer items-center uppercase"
           onClick={() => handleDropdownToggle(label)}>
           {label}
           {dropdownItems && (
@@ -56,12 +60,15 @@ const NavLink = ({
             maxHeight: `${dropdownHeight}px`,
             opacity: isDropdownOpen ? 1 : 0,
           }}>
-          {dropdownItems.map((subLink, subIndex) => (
+          {dropdownItems.map((subLink, index) => (
             <li
-              key={subIndex}
+              key={index}
               className=" pl-3 py-3">
               <Link
                 to={subLink.href}
+                onClick={() => {
+                  setIsOpen(false);
+                }}
                 className="text-lg md:text-xl lg:text-lg">
                 {subLink.label}
               </Link>

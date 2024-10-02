@@ -49,7 +49,7 @@ const IndustriesPage = () => {
 
         {/* accordion */}
         <div className="space-y-6">
-          <h2 className="text-4xl text-blue-500 font-semibold">
+          <h2 className="text-4xl text-primary-blue font-semibold">
             {`Our ${pageTitle}`}
           </h2>
 

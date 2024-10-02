@@ -24,7 +24,7 @@ const DropdownMenu = ({ items }) => {
         {items.map((item, index) => (
           <li
             key={index}
-            className="group hover:bg-primary-blue transition-colors duration-300">
+            className="group border-l-8 border-neutral-white hover:bg-primary-blue hover:bg-opacity-50 hover:border-primary-blue transition-colors duration-300">
             <Link
               to={item.href}
               className="block p-4 text-primary group-hover:text-neutral-white text-nowrap text-xl">

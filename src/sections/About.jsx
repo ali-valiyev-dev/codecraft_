@@ -35,7 +35,7 @@ const About = () => {
                 autoPlay
                 controls
                 playsInline
-                poster="./about-us-1.jpg"
+                poster="/about-us-cover.jpg"
                 aria-label="Background video of Rabalon"
                 onEnded={() => {
                   setIsPlaying(false);
@@ -44,8 +44,8 @@ const About = () => {
             ) : (
               <img
                 className="w-full h-full object-cover"
-                src="./about-us-1.jpg"
-                alt="About image of Rabalon"
+                src="./about-us-cover.jpg"
+                alt="About cover image of Rabalon"
               />
             )}
           </div>
@@ -54,7 +54,7 @@ const About = () => {
           <div className="w-full lg:w-1/2 flex flex-col gap-12 xl:pr-12">
             {/* text content */}
             <div className="">
-              <p className="lg:text-lg xl:text-xl text-neutral-white">
+              <p className="lg:text-lg xl:text-xl text-primary-blue">
                 Rabalon is an IT service provider that is helping companies with
                 innovative solutions. We always keep the client’s best interest
                 in mind. Our dedicated and expert team helps us develop
@@ -66,7 +66,7 @@ const About = () => {
             {/* buttons */}
             <div className="flex flex-wrap items-center gap-3 lg:gap-6">
               <Button
-                title="Our Short Film"
+                title="Our Promo video"
                 icon={isPlaying ? "mdi:pause" : "mdi:play"}
                 onClick={() => {
                   setIsPlaying(!isPlaying);

@@ -29,7 +29,7 @@ const OfficeLocationCard = ({
           href={addressUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline text-white">
+          className="hover:underline">
           {address}
         </a>
       </div>
@@ -42,7 +42,7 @@ const OfficeLocationCard = ({
         />
         <a
           href="mailto:+7037550073"
-          className="hover:underline text-white">
+          className="hover:underline">
           {email}
         </a>
       </div>
@@ -55,7 +55,7 @@ const OfficeLocationCard = ({
         />
         <a
           href={`tel:${phone}`}
-          className="hover:underline text-white">
+          className="hover:underline">
           {formatPhoneNumber(phone)}
         </a>
       </div>

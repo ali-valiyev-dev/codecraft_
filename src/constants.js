@@ -243,7 +243,7 @@ export const PARTNER_COMPANY_LOGOS = [
 export const SOLUTIONS_DATA = [
   {
     id: "software_development",
-    pageTitle: "Software Development",
+    pageTitle: "Software Development Solutions",
     pageSubtitle:
       "We offer tailor-made software development solutions to help your business grow",
     img: "/software-development-cover.jpg",
@@ -435,7 +435,7 @@ export const SOLUTIONS_DATA = [
 export const INDUSTRIES_DATA = [
   {
     id: "public_sector",
-    pageTitle: "Public Sector",
+    pageTitle: "Public Sector Solutions",
     pageSubtitle:
       "We develop public sector IT solutions and software that integrate web services, mobile channels, and applications on a single platform.",
 
@@ -482,7 +482,7 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "healthcare",
-    pageTitle: "Healthcare",
+    pageTitle: "Healthcare Solutions",
     pageSubtitle:
       "We offer healthcare software development services that enable our clients to experience the edge of new technologies, provide great patient care, and create a robust and integrated healthcare ecosystem.",
 
@@ -534,7 +534,7 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "hospitality",
-    pageTitle: "Hospitality",
+    pageTitle: "Hospitality Solutions",
     pageSubtitle:
       "We aim to develop custom software solutions to optimize your workflow, improve customer experience and meet ever-changing demands.",
 
@@ -577,7 +577,7 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "retail",
-    pageTitle: "Retail",
+    pageTitle: "Retail Solutions",
     pageSubtitle:
       "Enabling retail businesses to digitize their offerings and reach a wider audience effectively.",
 

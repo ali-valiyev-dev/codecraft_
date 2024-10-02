@@ -6,26 +6,28 @@ const SolutionCard = ({ icon, title, desc, to }) => {
   return (
     <Link
       to={to}
-      className="max-w-80 lg:max-w-96 flex flex-col px-5 pt-6 rounded-xl bg-[#232558] justify-between border border-primary-blue hover:border-neutral-white transition-colors duration-300">
+      className="group max-w-80 lg:max-w-96 flex flex-col px-5 pt-6 rounded-lg bg-neutral-white hover:bg-primary-blue justify-between border border-primary-dark-blue text-primary-blue hover:text-neutral-white transition-colors duration-300">
       <div className="">
         <div className="p-3 w-max">
           <Icon
             icon={icon}
             width={54}
             height={54}
-            className="text-neutral-white"
+            className=""
           />
         </div>
-        <h3 className=" font-semibold text-2xl bg-gradient-to-r from-neutral-white to-neutral-cyanBluishGray bg-clip-text text-transparent mt-12">
-          {title}
-        </h3>
-        <hr className="w-1/2 h-[1px] bg-gradient-to-r from-neutral-white to-neutral-cyanBluishGray border-0 my-9" />
-        <p className="text-lg text-neutral-white">{desc}</p>
+
+        <h3 className="font-semibold text-2xl mt-12">{title}</h3>
+
+        <hr className="w-1/2 h-[1px] bg-primary-dark-blue group-hover:bg-neutral-white border-0 my-9" />
+
+        <p className="text-lg">{desc}</p>
       </div>
 
       <div className="flex flex-col items-center justify-center mt-9">
-        <hr className="w-full h-[1px] bg-gradient-to-r from-neutral-white to-neutral-cyanBluishGray border-0" />
-        <div className="flex items-center gap-3 text-neutral-white py-4 text-lg text-nowrap uppercase">
+        <hr className="w-full h-[1px] bg-primary-dark-blue group-hover:bg-neutral-white border-0" />
+
+        <div className="flex items-center gap-3 py-4 text-lg text-nowrap uppercase">
           <span>Read More</span>
           <span>
             <Icon

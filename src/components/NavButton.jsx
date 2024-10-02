@@ -6,7 +6,7 @@ const NavButton = ({ onClick, icon, alt }) => (
     type="button"
     className="w-max flex items-center justify-center border rounded-full p-2 lg:p-3 font-medium group transition-colors duration-300 ease-in-out
     
-    border-neutral-cyanBluishGray text-neutral-cyanBluishGray hover:border-primary-blue hover:bg-neutral-white hover:text-primary-blue
+    border-neutral-500 text-neutral-500 hover:border-primary-blue hover:text-primary-blue
     "
     onClick={onClick}
     aria-label={alt}>

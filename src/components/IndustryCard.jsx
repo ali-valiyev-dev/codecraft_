@@ -3,24 +3,22 @@ import PropTypes from "prop-types";
 
 const IndustryCard = ({ icon, title, desc }) => {
   return (
-    <div className="max-w-80 lg:max-w-96 flex flex-col px-5 py-6 rounded-xl bg-[#232558] justify-between border border-primary-blue">
-      <div className="space-y-9">
+    <div className="max-w-80 lg:max-w-96 flex flex-col px-5 py-6 rounded-xl bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
+      <div className="space-y-5">
         <div className="p-3 w-max">
           <Icon
             icon={icon}
             width={54}
             height={54}
-            className="text-neutral-white"
+            className=""
           />
         </div>
 
-        <h3 className="font-semibold text-2xl bg-gradient-to-r from-neutral-white to-neutral-cyanBluishGray bg-clip-text text-transparent">
-          {title}
-        </h3>
+        <h3 className="font-semibold text-2xl">{title}</h3>
 
-        <hr className="w-1/2 h-[1px] bg-gradient-to-r from-neutral-white to-neutral-cyanBluishGray border-0" />
+        <hr className="w-1/2 h-[1px] bg-neutral-white border-0 my-9" />
 
-        <p className="text-lg text-neutral-white">{desc}</p>
+        <p className="text-lg ">{desc}</p>
       </div>
     </div>
   );
