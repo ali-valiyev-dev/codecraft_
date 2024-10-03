@@ -77,7 +77,7 @@ const Footer = () => {
           <span>&copy; 2024 Rabalon</span>
 
           <Link
-            to="/"
+            to="/privacy-policy"
             className="text-neutral-300 hover:text-neutral-white">
             Privacy Policy
           </Link>
