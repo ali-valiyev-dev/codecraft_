@@ -13,7 +13,7 @@ const AboutPage = () => {
 
   return (
     <Container>
-      <div className="space-y-16">
+      <div className="space-y-16 mt-20">
         {/* main content */}
         <div className="flex flex-col items-center justify-center gap-8">
           {/* section header */}
@@ -41,7 +41,6 @@ const AboutPage = () => {
                     alt="Rabalon team"
                     className="w-full h-1/2 object-cover rounded-sm"
                   />
-                  {/* bottom small image */}
                 </div>
 
                 {/* right side large image */}
@@ -62,7 +61,7 @@ const AboutPage = () => {
                 Fostering Business Growth
               </h1>
 
-              <article className="text-white text-lg  flex flex-col gap-4">
+              <article className="text-white text-lg flex flex-col gap-4">
                 <p>
                   Rabalon emerged in 2019, as an IT service provider and is
                   helping companies with its innovative solutions. We always
@@ -77,14 +76,13 @@ const AboutPage = () => {
                   <p>
                     We strive to make our clients&apos; dreams true by offering
                     them practical solutions in the form of secure, scalable,
-                    and feature-rich software
+                    and feature-rich software.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-neutral-500">Our Vision</h3>
-
                   <p>
-                    Our Vision is to enable our clients to discover the digital
+                    Our vision is to enable our clients to discover the digital
                     world and set their goals and objectives.
                   </p>
                 </div>

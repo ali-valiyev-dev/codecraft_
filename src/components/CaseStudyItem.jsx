@@ -17,7 +17,7 @@ const CaseStudyItem = ({
         <img
           className="w-full h-full object-cover"
           src={image}
-          alt={imageAlt}
+          alt={imageAlt || `Image of case study: ${title}`}
         />
       </div>
 
@@ -29,7 +29,7 @@ const CaseStudyItem = ({
               <img
                 className="w-max h-10 object-cover"
                 src={logo}
-                alt={logoAlt}
+                alt={logoAlt || `${title} logo`}
               />
             </div>
             <h3 className="text-2xl font-semibold">{title}</h3>
@@ -39,7 +39,7 @@ const CaseStudyItem = ({
           <p className="mt-1">{overview}</p>
 
           <h4 className="mt-5 text-neutral-500">
-            {index === 0 ? "What we did?" : "Acheivement"}
+            {index === 0 ? "What we did?" : "Achievement"}
           </h4>
           <p className="mt-1">{achievement}</p>
         </div>
@@ -53,7 +53,7 @@ CaseStudyItem.propTypes = {
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
-  logoAlt: PropTypes.string.isRequired,
+  logoAlt: PropTypes.string,
   title: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   achievement: PropTypes.string.isRequired,

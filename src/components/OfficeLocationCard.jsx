@@ -17,7 +17,7 @@ const OfficeLocationCard = ({
         width={72}
         height={72}
       />
-      <h3 className="lg:text-lg font-medium">{location}</h3>
+      <h3 className="text-md lg:text-lg font-medium">{location}</h3>
 
       <div className="flex gap-2">
         <Icon
@@ -41,7 +41,7 @@ const OfficeLocationCard = ({
           height={20}
         />
         <a
-          href="mailto:+7037550073"
+          href={`mailto:${email}`}
           className="hover:underline">
           {email}
         </a>

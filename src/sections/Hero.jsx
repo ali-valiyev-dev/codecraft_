@@ -15,17 +15,17 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-primary-blue bg-opacity-70" />
 
-      <div className="px-4 md:px-10 xl:px-0 relative flex flex-col items-center justify-center gap-40 h-screen max-w-5xl">
+      <div className="px-4 md:px-10 xl:px-0 relative flex flex-col items-center justify-center gap-20 h-screen max-w-5xl">
         {/* Hero text */}
         <div className=" text-center text-neutral-white space-y-5">
-          <h1 className="text-4xl md:text-6xl">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl">
             Your Tech Partner <br />
             <span className="text-primary-very-light-blue font-bold">
               For Accelerated Growth
             </span>
           </h1>
 
-          <p className="text-lg md:text-2xl">
+          <p className="text-lg lg:text-xl xl:text-2xl text-balance">
             Rabalon emerged from a realization that small businesses face
             significant hurdles in the digital technology space. Our approach is
             two-pronged: we provide technology consulting services to recommend

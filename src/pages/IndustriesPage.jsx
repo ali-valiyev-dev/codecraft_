@@ -29,8 +29,7 @@ const IndustriesPage = () => {
 
   return (
     <Container>
-      {/* main content */}
-      <div className="space-y-16">
+      <div className="space-y-16 mt-20">
         {/* section header */}
         <SectionHeader
           title={pageTitle}

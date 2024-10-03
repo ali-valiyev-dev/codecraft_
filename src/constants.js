@@ -134,7 +134,7 @@ export const CASE_STUDIES = [
   {
     image: "./ferrum-capital-cover.jpg",
     imageAlt: "Image of Ferrum Capital",
-    logo: "./ferrum-capital-logo.svg",
+    logo: "./logo.png",
     logoAlt: "Logo of Ferrum Capital",
     title:
       "Detecting key cyber-security weaknesses & improve business processes",
@@ -259,7 +259,7 @@ export const SOLUTIONS_DATA = [
       {
         title: "Web Application Development",
         content:
-          "Web apps with quality architecture, need-based requirements, clean code, interactive design, and thorough testing to ensure it fulfills your business needs and delivers repeatable ROI. Offerinf customized web app development to meet your business needs.",
+          "Web apps with quality architecture, need-based requirements, clean code, interactive design, and thorough testing to ensure it fulfills your business needs and delivers repeatable ROI. Offering customized web app development to meet your business needs.",
       },
       {
         title: "Custom Enterprise software",
@@ -571,7 +571,7 @@ export const INDUSTRIES_DATA = [
         icon: "mdi:file-document",
         title: "Payment and Document Management System",
         content:
-          "Inefficient management can cause you loss. Our experts will design a full-stack document and payment management system to automate your payments and manage your data in a centralized and secure way.",
+          "Inefficient management can cause losses. Our experts design full-stack document and payment management systems to automate payments and centralize data securely.",
       },
     ],
   },

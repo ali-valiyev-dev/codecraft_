@@ -7,14 +7,12 @@ const TestimonialItem = ({ rating, name, role, message, image }) => {
       {/* rating */}
       <div className="flex">
         {Array.from({ length: rating }).map((_, index) => (
-          <div
-            key={index}
-            className="">
+          <div key={index}>
             <Icon
               icon={"mdi:star"}
               width={24}
               height={24}
-              className="text-primary-light-blue"
+              className="text-primary-blue"
             />
           </div>
         ))}
@@ -30,7 +28,7 @@ const TestimonialItem = ({ rating, name, role, message, image }) => {
         <img
           src={image}
           alt={name}
-          className="w-20 h-20 rounded-full"
+          className="w-20 h-20 rounded-full object-cover"
         />
         <div>
           <h3 className="text-primary-very-dark-blue lg:text-lg font-extrabold">

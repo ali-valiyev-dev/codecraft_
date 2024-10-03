@@ -27,10 +27,9 @@ const SolutionsPage = () => {
 
   return (
     <Container>
-      <div className="space-y-16">
+      <div className="space-y-16 mt-20">
         {/* header with image */}
-        <div className="flex flex-col items-center justify-center gap-8 ">
-          {/* section header */}
+        <div className="flex flex-col items-center justify-center gap-8">
           <SectionHeader
             title={pageTitle}
             subtitle={pageSubtitle}
@@ -40,20 +39,15 @@ const SolutionsPage = () => {
           <div className="w-full flex flex-col-reverse lg:flex-row gap-6 xl:gap-12">
             {/* leftside content */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
-              {/* text content */}
               <h1 className="text-2xl lg:text-3xl xl:text-4xl text-primary-blue font-semibold">
                 {title}
               </h1>
-
               <p className="text-black text-lg text-balance">{desc}</p>
 
-              {/* button */}
               <Button
                 title="Reach Out To Us"
                 icon="lucide:arrow-right"
-                onClick={() => {
-                  navigate("/contacts");
-                }}
+                onClick={() => navigate("/contacts")}
                 alt="Navigate to Contact page"
               />
             </div>

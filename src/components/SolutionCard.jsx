@@ -6,28 +6,30 @@ const SolutionCard = ({ icon, title, desc, to }) => {
   return (
     <Link
       to={to}
-      className="group max-w-80 lg:max-w-96 flex flex-col px-5 pt-6 rounded-lg bg-neutral-white hover:bg-primary-blue justify-between border border-primary-dark-blue text-primary-blue hover:text-neutral-white transition-colors duration-300">
-      <div className="">
-        <div className="p-3 w-max">
+      className="group max-w-[340px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white hover:bg-primary-blue justify-between border border-primary-dark-blue text-primary-blue hover:text-neutral-white transition-colors duration-300">
+      <div>
+        <div className="w-max">
           <Icon
             icon={icon}
-            width={54}
-            height={54}
+            width={48}
+            height={48}
             className=""
           />
         </div>
 
-        <h3 className="font-semibold text-2xl mt-12">{title}</h3>
+        <h3 className="font-semibold text-xl lg:text-2xl mt-8 lg:mt-10">
+          {title}
+        </h3>
 
-        <hr className="w-1/2 h-[1px] bg-primary-dark-blue group-hover:bg-neutral-white border-0 my-9" />
+        <hr className="w-1/2 h-[1px] bg-primary-dark-blue group-hover:bg-neutral-white border-0 my-6 lg:my-9" />
 
-        <p className="text-lg">{desc}</p>
+        <p className="text-md lg:text-lg">{desc}</p>
       </div>
 
-      <div className="flex flex-col items-center justify-center mt-9">
+      <div className="flex flex-col items-center justify-center mt-6 lg:mt-8">
         <hr className="w-full h-[1px] bg-primary-dark-blue group-hover:bg-neutral-white border-0" />
 
-        <div className="flex items-center gap-3 py-4 text-lg text-nowrap uppercase">
+        <div className="flex items-center gap-3 pt-4 text-md lg:text-lg text-nowrap uppercase">
           <span>Read More</span>
           <span>
             <Icon

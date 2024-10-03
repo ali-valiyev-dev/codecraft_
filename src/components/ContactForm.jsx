@@ -41,7 +41,6 @@ const ContactForm = () => {
     tel: "",
     requirement: "",
   });
-
   const [errors, setErrors] = useState({});
 
   const handleChange = e => {
@@ -69,76 +68,35 @@ const ContactForm = () => {
       setErrors(formattedErrors);
     }
   };
+
   return (
-    <div className="w-full lg:w-1/2 flex p-6 xl:p-12 rounded-lg border border-neutral-500">
+    <div className="w-full lg:w-1/2 p-6 xl:p-10 rounded-lg border border-neutral-500">
       <form
         onSubmit={handleSubmit}
-        className="w-full space-y-4">
-        <div>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
-          />
-          {errors.name && <p className="text-neutral-red">{errors.name}</p>}
-        </div>
-
-        <div>
-          <input
-            type="text"
-            name="companyName"
-            placeholder="Company Name"
-            value={formData.companyName}
-            onChange={handleChange}
-            className="w-full p-2 lg:p-4 rounded-md bg-neutral-200 text-neutral-black"
-          />
-          {errors.companyName && (
-            <p className="text-neutral-red">{errors.companyName}</p>
-          )}
-        </div>
-
-        <div>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
-          />
-          {errors.email && <p className="text-neutral-red">{errors.email}</p>}
-        </div>
-
-        <div>
-          <input
-            type="tel"
-            name="tel"
-            placeholder="Phone Number (Optional)"
-            value={formData.tel}
-            onChange={handleChange}
-            className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
-          />
-          {errors.tel && <p className="text-neutral-red">{errors.tel}</p>}
-        </div>
-
-        <div>
-          <textarea
-            name="requirement"
-            placeholder="Describe Your Requirement"
-            value={formData.requirement}
-            onChange={handleChange}
-            className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black h-24"
-          />
-          {errors.requirement && (
-            <p className="text-neutral-red">{errors.requirement}</p>
-          )}
-        </div>
+        className="space-y-4">
+        {["name", "companyName", "email", "tel", "requirement"].map(field => (
+          <div key={field}>
+            <input
+              type={
+                field === "email" ? "email" : field === "tel" ? "tel" : "text"
+              }
+              name={field}
+              placeholder={
+                field.charAt(0).toUpperCase() +
+                field.slice(1).replace(/([A-Z])/g, " $1")
+              }
+              value={formData[field]}
+              onChange={handleChange}
+              className="w-full p-3 md:p-4 rounded-md bg-neutral-200 text-neutral-black"
+            />
+            {errors[field] && (
+              <p className="text-neutral-red">{errors[field]}</p>
+            )}
+          </div>
+        ))}
 
         <Button
-          type={"submit"}
+          type="submit"
           title="Submit"
           icon="mdi:arrow-right"
           alt="Submit/Send button"
