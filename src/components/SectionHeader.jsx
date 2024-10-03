@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const SectionHeader = ({ title, subtitle }) => {
   return (
     <div className="flex flex-col justify-center items-center text-center mx-auto space-y-3 md:space-y-4">
-      <h2 className="font-medium text-neutral-500 text-sm md:text-md lg:text-lg">
+      <h2 className="font-medium text-neutral-500 text-md lg:text-lg">
         {title}
       </h2>
 

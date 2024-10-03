@@ -27,11 +27,11 @@ const Footer = () => {
 
           {/* Navigation Links Section */}
           <div className="flex flex-col xl:flex-row gap-x-10 gap-y-6 w-full">
-            <div className="flex flex-wrap lg:flex-nowrap gap-x-4 md:gap-x-8 gap-y-6">
+            <div className="flex flex-wrap lg:flex-nowrap gap-x-12 xl:gap-x-14 gap-y-6">
               {NAV_LINKS.map((navItem, index) =>
                 index !== 0 ? (
                   <div key={index}>
-                    <h3 className="text-md lg:text-lg font-semibold mb-2">
+                    <h3 className="text-md lg:text-lg font-semibold mb-2 text-nowrap">
                       {navItem.label}
                     </h3>
                     <ul className="space-y-2">
@@ -40,7 +40,7 @@ const Footer = () => {
                           <li key={dropdown.label}>
                             <Link
                               to={dropdown.href}
-                              className="text-neutral-300 hover:text-neutral-white text-sm lg:text-base">
+                              className="text-neutral-300 text-nowrap hover:text-neutral-white text-sm lg:text-base">
                               {dropdown.label}
                             </Link>
                           </li>
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-6 border-t pt-4 flex flex-col md:flex-row gap-y-4 gap-x-6 items-center text-sm">
+        <div className="mt-6 border-t pt-4 flex gap-x-6 items-center text-sm">
           <span>&copy; 2024 Rabalon</span>
 
           <Link

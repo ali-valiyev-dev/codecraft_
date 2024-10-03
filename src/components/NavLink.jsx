@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
-import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
-const NavLink = ({ href, label, dropdownItems }) => {
+const NavLink = ({ href, label }) => {
   const isLink = href && href !== "null";
 
   return (
@@ -16,14 +15,6 @@ const NavLink = ({ href, label, dropdownItems }) => {
       ) : (
         <div className="text-xl text-nowrap flex items-center cursor-pointer">
           {label}
-          {dropdownItems && (
-            <Icon
-              icon={"mdi:chevron-down"}
-              width={24}
-              height={24}
-              className="ml-1 mt-1"
-            />
-          )}
         </div>
       )}
     </li>
@@ -33,12 +24,6 @@ const NavLink = ({ href, label, dropdownItems }) => {
 NavLink.propTypes = {
   href: PropTypes.string,
   label: PropTypes.string.isRequired,
-  dropdownItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })
-  ),
 };
 
 export default NavLink;

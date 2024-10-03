@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 
@@ -15,6 +15,8 @@ const NavLink = ({
   const dropdownRef = useRef(null);
   const [dropdownHeight, setDropdownHeight] = useState(0);
 
+  const location = useLocation();
+
   useEffect(() => {
     if (isDropdownOpen) {
       setDropdownHeight(dropdownRef.current.scrollHeight);
@@ -26,7 +28,7 @@ const NavLink = ({
   const isLink = href && href !== "null";
 
   return (
-    <li className="relative text-xl md:text-2xl xl:text-xl ">
+    <li className="relative text-2xl text-primary-blue">
       {isLink ? (
         <Link
           to={href}
@@ -60,20 +62,28 @@ const NavLink = ({
             maxHeight: `${dropdownHeight}px`,
             opacity: isDropdownOpen ? 1 : 0,
           }}>
-          {dropdownItems.map((subLink, index) => (
-            <li
-              key={index}
-              className=" pl-3 py-3">
-              <Link
-                to={subLink.href}
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-lg md:text-xl lg:text-lg">
-                {subLink.label}
-              </Link>
-            </li>
-          ))}
+          {dropdownItems.map((subLink, index) => {
+            const isActive = location.pathname.slice(1) === subLink.href;
+
+            return (
+              <li
+                key={index}
+                className={`border-l-8 border-neutral-white px-3 py-3 w-max  ${
+                  isActive
+                    ? "bg-primary-blue bg-opacity-50  border-primary-blue text-neutral-white"
+                    : ""
+                }`}>
+                <Link
+                  to={subLink.href}
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                  className="text-xl">
+                  {subLink.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       )}
     </li>

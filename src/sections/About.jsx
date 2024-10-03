@@ -41,7 +41,7 @@ const About = () => {
                 aria-label="Promo video of Rabalon"
                 crossOrigin="anonymous"
                 onEnded={() => setIsPlaying(false)}
-                preload="metadata" // Preload to reduce resource usage
+                preload="metadata"
               />
             ) : (
               <img

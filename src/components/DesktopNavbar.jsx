@@ -1,17 +1,14 @@
 import { useState } from "react";
 import { NAV_LINKS } from "../constants";
 import {
-  Button,
+  HeroContactsButton,
   DropdownMenu,
   Logo,
   NavLink,
   NavLinksWrapper,
 } from "../components";
-import { useNavigate } from "react-router-dom";
 
 const DesktopNavbar = () => {
-  const navigate = useNavigate();
-
   const [dropdown, setDropdown] = useState(null);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
@@ -51,13 +48,7 @@ const DesktopNavbar = () => {
       </nav>
 
       <div className="hidden xl:block">
-        <Button
-          title="Get In Touch"
-          onClick={() => {
-            navigate("/contacts");
-          }}
-          alt="Navigate to Contacts page"
-        />
+        <HeroContactsButton />
       </div>
     </>
   );

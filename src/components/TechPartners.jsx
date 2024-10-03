@@ -31,7 +31,7 @@ const TechPartners = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12"
+                  className="h-8 lg:h-12"
                 />
               </li>
             ))}

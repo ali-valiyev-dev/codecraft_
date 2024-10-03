@@ -37,7 +37,7 @@ const IndustriesPage = () => {
         />
 
         {/* industry cards */}
-        <div className="flex flex-wrap items-stretch justify-center gap-6">
+        <div className="flex flex-wrap items-stretch justify-center gap-5">
           {cardsData.map((card, index) => (
             <IndustryCard
               key={index}

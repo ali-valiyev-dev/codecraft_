@@ -25,10 +25,10 @@ const Contacts = () => {
           <div className="w-full lg:w-1/2 space-y-10 md:space-y-12">
             {/* contact details header */}
             <div className="space-y-3 md:space-y-4">
-              <p className="text-lg md:text-xl xl:text-2xl font-semibold">
+              <p className="text-xl lg:text-3xl font-medium">
                 Reach out to our consultants
               </p>
-              <p className="text-md lg:text-lg xl:text-xl">
+              <p className="text-lg xl:text-xl">
                 Your questions and requests are always welcome.
               </p>
             </div>

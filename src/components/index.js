@@ -24,6 +24,7 @@ import Accordion from "./Accordion.jsx";
 import IndustryCard from "./IndustryCard.jsx";
 import MemberCard from "./MemberCard.jsx";
 import Loading from "./Loading.jsx";
+import HeroContactsButton from "./HeroContactsButton.jsx";
 
 export {
   Header,
@@ -36,6 +37,7 @@ export {
   DropdownMenu,
   SocialLink,
   Button,
+  HeroContactsButton,
   SolutionCard,
   Container,
   SectionHeader,

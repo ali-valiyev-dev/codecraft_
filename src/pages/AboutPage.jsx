@@ -15,7 +15,7 @@ const AboutPage = () => {
     <Container>
       <div className="space-y-16 mt-20">
         {/* main content */}
-        <div className="flex flex-col items-center justify-center gap-8">
+        <div className="flex flex-col items-center justify-center gap-6 md:gap-8">
           {/* section header */}
           <SectionHeader
             title="About Us"
@@ -55,13 +55,13 @@ const AboutPage = () => {
             </div>
 
             {/* rightside text content */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
+            <div className="w-full lg:w-1/2 flex flex-col space-y-6">
               {/* text content */}
-              <h1 className="text-2xl lg:text-3xl xl:text-4xl text-blue-500 font-semibold">
+              <h1 className="text-2xl md:text-3xl xl:text-4xl text-primary-blue font-semibold">
                 Fostering Business Growth
               </h1>
 
-              <article className="text-white text-lg flex flex-col gap-4">
+              <article className="text-neutral-600 text-base md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4">
                 <p>
                   Rabalon emerged in 2019, as an IT service provider and is
                   helping companies with its innovative solutions. We always
@@ -70,7 +70,7 @@ const AboutPage = () => {
                   value to our clients and help in business growth.
                 </p>
                 <div>
-                  <h3 className="font-semibold text-neutral-500">
+                  <h3 className="font-semibold text-primary-blue text-lg md:text-xl">
                     Our Mission
                   </h3>
                   <p>
@@ -80,7 +80,9 @@ const AboutPage = () => {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-neutral-500">Our Vision</h3>
+                  <h3 className="font-semibold text-primary-blue text-lg md:text-xl">
+                    Our Vision
+                  </h3>
                   <p>
                     Our vision is to enable our clients to discover the digital
                     world and set their goals and objectives.
@@ -95,21 +97,21 @@ const AboutPage = () => {
                 onClick={() => {
                   navigate("/contacts");
                 }}
-                alt="Navigate to Contact page"
+                alt="Navigate to Contacts page"
               />
             </div>
           </div>
         </div>
 
         {/* team */}
-        <div className="space-y-16">
+        <div className="space-y-6 md:space-y-12">
           {/* team section header */}
           <SectionHeader
             title="Rabalon Team"
             subtitle="Meet Our Leadership"
           />
 
-          <div className="flex flex-wrap items-stretch justify-center gap-6">
+          <div className="flex flex-wrap items-stretch justify-center gap-5">
             {TEAM.map((member, index) => (
               <MemberCard
                 key={index}
