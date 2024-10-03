@@ -23,6 +23,7 @@ import FeaturedClients from "./FeaturedClients.jsx";
 import Accordion from "./Accordion.jsx";
 import IndustryCard from "./IndustryCard.jsx";
 import MemberCard from "./MemberCard.jsx";
+import Loading from "./Loading.jsx";
 
 export {
   Header,
@@ -50,4 +51,5 @@ export {
   Accordion,
   IndustryCard,
   MemberCard,
+  Loading,
 };
