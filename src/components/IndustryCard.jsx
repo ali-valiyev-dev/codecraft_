@@ -1,16 +1,18 @@
 import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const IndustryCard = ({ icon, title, desc }) => {
+  useAnimation([".anim-industry-card"], []);
+
   return (
-    <div className="max-w-[300px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
+    <div className="anim-industry-card max-w-[300px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
       <div className="space-y-5">
         <div className="p-3 w-max">
           <Icon
             icon={icon}
             width={54}
             height={54}
-            className=""
           />
         </div>
 

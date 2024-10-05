@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const TestimonialItem = ({ rating, name, role, message, image }) => {
+  useAnimation([".anim-endrs-card"]);
+
   return (
-    <div className="max-w-sm flex flex-col justify-between px-3 py-6 border border-primary-dark-blue bg-neutral-white rounded-lg">
+    <div className="anim-endrs-card max-w-sm flex flex-col justify-between px-3 py-6 border border-primary-dark-blue bg-neutral-white rounded-lg">
       {/* rating */}
       <div className="flex">
         {Array.from({ length: rating }).map((_, index) => (

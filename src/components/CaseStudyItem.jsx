@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const CaseStudyItem = ({
   index,
@@ -10,10 +11,12 @@ const CaseStudyItem = ({
   overview,
   achievement,
 }) => {
+  useAnimation([".anim-cs-img", ".anim-cs-text"]);
+
   return (
     <div className="w-full h-full flex flex-col lg:flex-row gap-6 xl:gap-12">
       {/* leftside content (img) */}
-      <div className="lg:w-1/2 max-h-[510px] rounded-lg overflow-hidden ">
+      <div className="anim-cs-img lg:w-1/2 max-h-[510px] rounded-lg overflow-hidden ">
         <img
           className="w-full h-full object-cover"
           src={image}
@@ -24,24 +27,25 @@ const CaseStudyItem = ({
       {/* rightside content */}
       <div className="w-full lg:w-1/2 flex flex-col gap-12">
         <div className="lg:text-lg xl:text-xl text-primary-blue">
-          <div className="flex flex-col gap-6">
-            <div className="">
-              <img
-                className="w-max h-10 object-cover"
-                src={logo}
-                alt={logoAlt || `${title} logo`}
-              />
-            </div>
+          <div className="anim-cs-text flex flex-col gap-6">
+            <img
+              className="w-max h-10 object-cover"
+              src={logo}
+              alt={logoAlt || `${title} logo`}
+            />
             <h3 className="text-2xl font-semibold">{title}</h3>
           </div>
 
-          <h4 className="mt-5 text-neutral-500">Overview</h4>
-          <p className="mt-1">{overview}</p>
-
-          <h4 className="mt-5 text-neutral-500">
-            {index === 0 ? "What we did?" : "Achievement"}
-          </h4>
-          <p className="mt-1">{achievement}</p>
+          <div className="anim-cs-text">
+            <h4 className="mt-5 text-neutral-500">Overview</h4>
+            <p className="mt-1">{overview}</p>
+          </div>
+          <div className="anim-cs-text">
+            <h4 className="mt-5 text-neutral-500">
+              {index === 0 ? "What we did?" : "Achievement"}
+            </h4>
+            <p className="mt-1">{achievement}</p>
+          </div>
         </div>
       </div>
     </div>

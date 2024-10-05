@@ -435,7 +435,7 @@ export const SOLUTIONS_DATA = [
 export const INDUSTRIES_DATA = [
   {
     id: "public_sector",
-    pageTitle: "Public Sector Solutions",
+    pageTitle: "Public Sector",
     pageSubtitle:
       "We develop public sector IT solutions and software that integrate web services, mobile channels, and applications on a single platform.",
 
@@ -482,7 +482,7 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "healthcare",
-    pageTitle: "Healthcare Solutions",
+    pageTitle: "Healthcare",
     pageSubtitle:
       "We offer healthcare software development services that enable our clients to experience the edge of new technologies, provide great patient care, and create a robust and integrated healthcare ecosystem.",
 
@@ -534,7 +534,7 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "hospitality",
-    pageTitle: "Hospitality Solutions",
+    pageTitle: "Hospitality",
     pageSubtitle:
       "We aim to develop custom software solutions to optimize your workflow, improve customer experience and meet ever-changing demands.",
 
@@ -577,7 +577,7 @@ export const INDUSTRIES_DATA = [
   },
   {
     id: "retail",
-    pageTitle: "Retail Solutions",
+    pageTitle: "Retail",
     pageSubtitle:
       "Enabling retail businesses to digitize their offerings and reach a wider audience effectively.",
 

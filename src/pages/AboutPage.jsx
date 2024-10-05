@@ -7,48 +7,52 @@ import {
   TechPartners,
 } from "../components";
 import { TEAM } from "../constants";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const AboutPage = () => {
   const navigate = useNavigate();
 
+  useAnimation([
+    ".anim-about-page-title",
+    ".anim-about-page-images",
+    ".anim-about-page-text",
+  ]);
+
   return (
     <Container>
       <div className="space-y-16 mt-20">
-        {/* main content */}
+        {/* about company */}
         <div className="flex flex-col items-center justify-center gap-6 md:gap-8">
-          {/* section header */}
-          <SectionHeader
-            title="About Us"
-            subtitle="Epic Beginnings: Unveiling Our Essence, Crafting Futures with Excellence."
-          />
+          {/* header */}
+          <div className="anim-about-page-title">
+            <SectionHeader
+              title="About Us"
+              subtitle="Epic Beginnings: Unveiling Our Essence, Crafting Futures with Excellence."
+            />
+          </div>
 
-          {/* main about us content */}
+          {/* about company content */}
           <div className="w-full flex flex-col lg:flex-row gap-6 xl:gap-12">
             {/* leftside image content */}
             <div className="w-full lg:w-1/2 rounded-lg overflow-hidden">
-              {/* images */}
-              <div className="flex gap-2">
+              <div className=" flex gap-2">
                 <div className="flex flex-col gap-2 w-1/2">
-                  {/* top small image */}
                   <img
                     src="/team-1.jpg"
                     alt="Rabalon team"
-                    className="w-full h-1/2 object-cover rounded-sm"
+                    className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
                   />
-                  {/* bottom small image */}
                   <img
                     src="/team-3.jpg"
                     alt="Rabalon team"
-                    className="w-full h-1/2 object-cover rounded-sm"
+                    className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
                   />
                 </div>
-
-                {/* right side large image */}
                 <div className="w-1/2">
                   <img
                     src="/team-4.jpg"
                     alt="Rabalon team"
-                    className="w-full h-full object-cover rounded-sm"
+                    className="anim-about-page-images w-full h-full object-cover rounded-sm"
                   />
                 </div>
               </div>
@@ -57,19 +61,21 @@ const AboutPage = () => {
             {/* rightside text content */}
             <div className="w-full lg:w-1/2 flex flex-col space-y-6">
               {/* text content */}
-              <h1 className="text-2xl md:text-3xl xl:text-4xl text-primary-blue font-semibold">
-                Fostering Business Growth
-              </h1>
 
               <article className="text-neutral-600 text-base md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4">
-                <p>
+                <h1 className="anim-about-page-text text-2xl md:text-3xl xl:text-4xl text-primary-blue font-semibold">
+                  Fostering Business Growth
+                </h1>
+
+                <p className="anim-about-page-text">
                   Rabalon emerged in 2019, as an IT service provider and is
                   helping companies with its innovative solutions. We always
                   keep the client’s best interest in mind. Our dedicated and
                   expert team helps us develop cutting-edge solutions that bring
                   value to our clients and help in business growth.
                 </p>
-                <div>
+
+                <div className="anim-about-page-text">
                   <h3 className="font-semibold text-primary-blue text-lg md:text-xl">
                     Our Mission
                   </h3>
@@ -79,7 +85,8 @@ const AboutPage = () => {
                     and feature-rich software.
                   </p>
                 </div>
-                <div>
+
+                <div className="anim-about-page-text">
                   <h3 className="font-semibold text-primary-blue text-lg md:text-xl">
                     Our Vision
                   </h3>
@@ -91,14 +98,16 @@ const AboutPage = () => {
               </article>
 
               {/* button */}
-              <Button
-                title="Reach Out To Us"
-                icon="lucide:arrow-right"
-                onClick={() => {
-                  navigate("/contacts");
-                }}
-                alt="Navigate to Contacts page"
-              />
+              <div className="anim-about-page-text">
+                <Button
+                  title="Reach Out To Us"
+                  icon="lucide:arrow-right"
+                  onClick={() => {
+                    navigate("/contacts");
+                  }}
+                  alt="Navigate to Contacts page"
+                />
+              </div>
             </div>
           </div>
         </div>

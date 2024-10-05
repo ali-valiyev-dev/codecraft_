@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import SectionHeader from "./SectionHeader";
 import { PARTNER_COMPANY_LOGOS } from "../constants";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const TechPartners = () => {
   const carouselRef = useRef(null);
@@ -12,12 +13,14 @@ const TechPartners = () => {
     ul.nextSibling.setAttribute("aria-hidden", "true");
   }, []);
 
+  useAnimation([".anim-partners"]);
+
   return (
     <div className="w-full mx-auto max-w-screen-2xl">
-      <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
+      <div className="anim-partners flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* header content */}
         <SectionHeader
-          title="Our Tech Partner"
+          title="Our Tech Partners"
           subtitle="Leveraging Global Expertise to Empower IT for Business Growth"
         />
 

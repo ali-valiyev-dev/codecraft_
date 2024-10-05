@@ -1,7 +1,10 @@
 import { Icon } from "@iconify/react";
 import FeaturedClients from "../components/FeaturedClients";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const Hero = () => {
+  useAnimation([".anim-hero-content"]);
+
   return (
     <section className="w-full flex justify-center overflow-hidden relative">
       <video
@@ -18,14 +21,14 @@ const Hero = () => {
       <div className="px-4 md:px-10 xl:px-0 relative flex flex-col items-center justify-center gap-20 h-screen max-w-5xl">
         {/* Hero text */}
         <div className=" text-center text-neutral-white space-y-5">
-          <h1 className="text-3xl md:text-4xl lg:text-6xl">
+          <h1 className="anim-hero-content text-3xl md:text-4xl lg:text-6xl">
             Your Tech Partner <br />
             <span className="text-primary-very-light-blue font-bold">
               For Accelerated Growth
             </span>
           </h1>
 
-          <p className="text-lg lg:text-xl xl:text-2xl text-balance">
+          <p className="anim-hero-content text-lg lg:text-xl xl:text-2xl text-balance">
             Rabalon emerged from a realization that small businesses face
             significant hurdles in the digital technology space. Our approach is
             two-pronged: we provide technology consulting services to recommend
@@ -34,11 +37,13 @@ const Hero = () => {
         </div>
 
         {/* featured clients */}
-        <FeaturedClients />
+        <div className="anim-hero-content">
+          <FeaturedClients />
+        </div>
       </div>
 
       {/* scroll down */}
-      <div className="absolute bottom-10 uppercase text-neutral-white flex flex-col items-center justify-center">
+      <div className="anim-hero-content absolute bottom-10 uppercase text-neutral-white flex flex-col items-center justify-center">
         <span>Scroll</span>
         <Icon
           icon="mdi:chevron-down"

@@ -2,7 +2,7 @@ import { FEATURED_CLIENTS } from "../constants";
 
 const FeaturedClients = () => {
   return (
-    <div className="w-full flex flex-col flex-nowrap items-center gap-5 overflow-hidden">
+    <div className="flex flex-col flex-nowrap items-center gap-5 overflow-hidden">
       <h4 className="font-medium text-neutral-300 lg:text-lg xl:text-xl">
         Featured Clients
       </h4>

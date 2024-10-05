@@ -4,6 +4,7 @@ import Button from "./Button";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const contactSchema = z.object({
   name: z
@@ -31,6 +32,8 @@ const contactSchema = z.object({
 });
 
 const ContactForm = () => {
+  useAnimation([".anim-form"]);
+
   const [formData, setFormData] = useState({
     name: "",
     companyName: "",
@@ -78,7 +81,7 @@ const ContactForm = () => {
     }
   };
   return (
-    <div className="w-full lg:w-1/2 flex p-4 xl:p-12 rounded-lg border border-neutral-500">
+    <div className="anim-form w-full lg:w-1/2 flex p-4 xl:p-12 rounded-lg border border-neutral-500">
       <ToastContainer />
       <form
         onSubmit={handleSubmit}

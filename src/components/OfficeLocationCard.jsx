@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
 import { formatPhoneNumber } from "../utils/helpers";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const OfficeLocationCard = ({
   countryFlag,
@@ -10,8 +11,10 @@ const OfficeLocationCard = ({
   phone,
   email,
 }) => {
+  useAnimation([".anim-location-details"]);
+
   return (
-    <div className="space-y-4">
+    <div className="anim-location-details space-y-4">
       <Icon
         icon={countryFlag}
         width={72}

@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const MemberCard = ({ img, name, position }) => {
+  useAnimation([".anim-member-card"]);
+
   return (
-    <div className="max-w-80 sm:max-w-72 xl:max-w-80  flex flex-col px-4 py-4 rounded-xl bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
+    <div className="anim-member-card max-w-80 sm:max-w-72 xl:max-w-80  flex flex-col px-4 py-4 rounded-xl bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
       <div className="space-y-4 md:space-y-5">
         {/* member image */}
         <div className="rounded-md overflow-hidden">

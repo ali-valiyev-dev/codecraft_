@@ -1,12 +1,15 @@
 import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const SolutionCard = ({ icon, title, desc, to }) => {
+  useAnimation([".anim-solution-card"]);
+
   return (
     <Link
       to={to}
-      className="group max-w-[340px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white hover:bg-primary-blue justify-between border border-primary-dark-blue text-primary-blue hover:text-neutral-white transition-colors duration-300">
+      className="anim-solution-card group max-w-[340px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white hover:bg-primary-blue justify-between border border-primary-dark-blue text-primary-blue hover:text-neutral-white transition-colors duration-300">
       <div>
         <div className="w-max">
           <Icon

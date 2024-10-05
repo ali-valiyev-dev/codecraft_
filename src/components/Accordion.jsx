@@ -1,10 +1,13 @@
 import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const Accordion = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef([]);
+
+  useAnimation([".anim-accordion-content"], data);
 
   const toggleIndex = index => {
     setActiveIndex(activeIndex === index ? 0 : index);
@@ -23,7 +26,7 @@ const Accordion = ({ data }) => {
         {data.map((data, index) => (
           <div
             key={index}
-            className={`border-b ${
+            className={`anim-accordion-content border-b ${
               activeIndex === index
                 ? "border-primary-blue"
                 : "border-neutral-600"
@@ -66,7 +69,7 @@ const Accordion = ({ data }) => {
       </div>
 
       {/* rightside (content for larger screens) */}
-      <div className="hidden lg:block w-full lg:w-1/2 transition-all duration-300 ease-in-out space-y-3 lg:space-y-4">
+      <div className="anim-accordion-content hidden lg:block w-full lg:w-1/2  space-y-3 lg:space-y-4">
         <h2 className="w-max text-lg lg:text-xl font-semibold border-b border-primary-blue text-primary-blue py-4">
           {data[activeIndex]?.title || data[0]?.title}
         </h2>

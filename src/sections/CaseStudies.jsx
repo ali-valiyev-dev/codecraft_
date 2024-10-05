@@ -2,10 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import { Container, NavButton, SectionHeader } from "../components";
 import CaseStudyItem from "../components/CaseStudyItem";
 import { CASE_STUDIES } from "../constants";
+import useAnimation from "../utils/hooks/useAnimations";
 
 const CaseStudies = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const userHasInteracted = useRef(false);
+
+  useAnimation([".anim-cs-title"]);
 
   const handleNext = () => {
     userHasInteracted.current = true;
@@ -33,10 +36,13 @@ const CaseStudies = () => {
     <Container>
       <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* header content */}
-        <SectionHeader
-          title="Latest Case Studies"
-          subtitle="From Challenge to Victory: Exploring Case Studies of Innovation and Excellence"
-        />
+
+        <div className="anim-cs-title">
+          <SectionHeader
+            title="Latest Case Studies"
+            subtitle="From Challenge to Victory: Exploring Case Studies of Innovation and Excellence"
+          />
+        </div>
 
         {/* main content */}
         <div className="w-full relative overflow-hidden">
