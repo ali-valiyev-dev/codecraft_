@@ -22,17 +22,14 @@ function App() {
             index
             element={<HomePage />}
           />
-
           <Route
             path="solutions/:id"
             element={<SolutionsPage />}
           />
-
           <Route
             path="industries/:id"
             element={<IndustriesPage />}
           />
-
           <Route
             path="about"
             element={<AboutPage />}
