@@ -22,7 +22,7 @@ const TechPartners = () => {
   }, [pathname]);
 
   return (
-    <div className="w-full mx-auto max-w-screen-2xl">
+    <div className="w-full mx-auto max-w-screen-2xl py-10 lg:py-14 xl:py-20">
       <div className="anim-partners flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* section header */}
         <div className="anim-partners-title">

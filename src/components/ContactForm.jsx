@@ -2,7 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import Button from "./Button";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useGSAP } from "@gsap/react";
 import animate from "../utils/animations";
@@ -58,16 +58,9 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      contactSchema.parse(formData);
+      toast.success("Submitted successfully!");
 
-      toast.success("Submitted successfully!", {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: true,
-        pauseOnHover: false,
-        draggable: false,
-        progress: 0,
-      });
+      contactSchema.parse(formData);
 
       setFormData({
         name: "",
@@ -85,7 +78,6 @@ const ContactForm = () => {
   };
   return (
     <div className="anim-form w-full lg:w-1/2 flex p-4 xl:p-12 rounded-lg border border-neutral-500">
-      <ToastContainer />
       <form
         onSubmit={handleSubmit}
         className="w-full space-y-4">
@@ -98,7 +90,11 @@ const ContactForm = () => {
             onChange={handleChange}
             className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
           />
-          {errors.name && <p className="text-neutral-red">{errors.name}</p>}
+          {errors.name && (
+            <p className="text-xs md:text-base text-neutral-red">
+              {errors.name}
+            </p>
+          )}
         </div>
 
         <div>
@@ -111,7 +107,9 @@ const ContactForm = () => {
             className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
           />
           {errors.companyName && (
-            <p className="text-neutral-red">{errors.companyName}</p>
+            <p className="text-xs md:text-base text-neutral-red">
+              {errors.companyName}
+            </p>
           )}
         </div>
 
@@ -124,7 +122,11 @@ const ContactForm = () => {
             onChange={handleChange}
             className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
           />
-          {errors.email && <p className="text-neutral-red">{errors.email}</p>}
+          {errors.email && (
+            <p className="text-xs md:text-base text-neutral-red">
+              {errors.email}
+            </p>
+          )}
         </div>
 
         <div>
@@ -136,7 +138,11 @@ const ContactForm = () => {
             onChange={handleChange}
             className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
           />
-          {errors.tel && <p className="text-neutral-red">{errors.tel}</p>}
+          {errors.tel && (
+            <p className="text-xs md:text-base text-neutral-red">
+              {errors.tel}
+            </p>
+          )}
         </div>
 
         <div>
@@ -148,7 +154,9 @@ const ContactForm = () => {
             className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black h-24"
           />
           {errors.requirement && (
-            <p className="text-neutral-red">{errors.requirement}</p>
+            <p className="text-xs md:text-base text-neutral-red">
+              {errors.requirement}
+            </p>
           )}
         </div>
 

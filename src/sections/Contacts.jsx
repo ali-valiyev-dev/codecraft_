@@ -7,6 +7,7 @@ import {
 } from "../components";
 import { CONTACT_DETAILS } from "../constants";
 import animate from "../utils/animations";
+import { ToastContainer } from "react-toastify";
 
 const Contacts = () => {
   useGSAP(() => {
@@ -15,7 +16,16 @@ const Contacts = () => {
 
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center gap-10 md:gap-12 xl:gap-16">
+      <div className="relative flex flex-col items-center justify-center gap-10 md:gap-12 xl:gap-16">
+        <div className="absolute top-0 left-0 z-50">
+          <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            hideProgressBar
+            pauseOnHover={false}
+            progress={0}
+          />
+        </div>
         {/* section header */}
         <div className="anim-contacts-title">
           <SectionHeader

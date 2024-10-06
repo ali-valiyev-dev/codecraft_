@@ -9,8 +9,8 @@ const IndustryCard = ({ icon, title, desc }) => {
   }, [title]);
 
   return (
-    <div className="anim-industry-card max-w-[300px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
-      <div className="space-y-5">
+    <div className="anim-industry-card max-w-[300px] lg:max-w-[350px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
+      <div className="space-y-3 lg:space-y-5">
         <div className="p-3 w-max">
           <Icon
             icon={icon}
