@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { lazy, Suspense, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { Loading } from "./components";
 
@@ -12,6 +12,12 @@ const Policy = lazy(() => import("./pages/Policy"));
 const SolutionsPage = lazy(() => import("./pages/SolutionsPage"));
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <Suspense fallback={<Loading />}>
       <Routes>

@@ -8,7 +8,8 @@ import {
   TechPartners,
 } from "../components";
 import { SOLUTIONS_DATA } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import { useGSAP } from "@gsap/react";
+import animate from "../utils/animations";
 
 const SolutionsPage = () => {
   const params = useParams();
@@ -16,7 +17,9 @@ const SolutionsPage = () => {
 
   const solution = SOLUTIONS_DATA.find(solution => solution.id === params.id);
 
-  useAnimation([".anim-solution-title", ".anim-solution-content"], []);
+  useGSAP(() => {
+    animate([".anim-solution-title", ".anim-solution-content"]);
+  }, [params.id]);
 
   useEffect(() => {
     if (!solution) {
@@ -48,7 +51,7 @@ const SolutionsPage = () => {
                 {title}
               </h1>
 
-              <p className="anim-solution-content text-black text-lg text-balance">
+              <p className="anim-solution-content text-black lg:text-lg">
                 {desc}
               </p>
 

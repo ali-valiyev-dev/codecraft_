@@ -1,9 +1,12 @@
+import { useGSAP } from "@gsap/react";
 import { Container, SectionHeader, SolutionCard } from "../components";
 import { SOLUTIONS } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
 
 const Solutions = () => {
-  useAnimation([".anim-solutions-title"]);
+  useGSAP(() => {
+    animate([".anim-solutions-title"]);
+  }, []);
 
   return (
     <Container>

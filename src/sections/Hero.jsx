@@ -1,9 +1,12 @@
 import { Icon } from "@iconify/react";
 import FeaturedClients from "../components/FeaturedClients";
-import useAnimation from "../utils/hooks/useAnimations";
+import { useGSAP } from "@gsap/react";
+import animate from "../utils/animations";
 
 const Hero = () => {
-  useAnimation([".anim-hero-content"]);
+  useGSAP(() => {
+    animate([".anim-hero-content"]);
+  }, []);
 
   return (
     <section className="w-full flex justify-center overflow-hidden relative">

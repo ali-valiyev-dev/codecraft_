@@ -1,5 +1,6 @@
+import { useGSAP } from "@gsap/react";
 import PropTypes from "prop-types";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
 
 const CaseStudyItem = ({
   index,
@@ -11,7 +12,9 @@ const CaseStudyItem = ({
   overview,
   achievement,
 }) => {
-  useAnimation([".anim-cs-img", ".anim-cs-text"]);
+  useGSAP(() => {
+    animate([".anim-cs-img", ".anim-cs-text"]);
+  }, []);
 
   return (
     <div className="w-full h-full flex flex-col lg:flex-row gap-6 xl:gap-12">

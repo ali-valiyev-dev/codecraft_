@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button, Container, SectionHeader, Statistics } from "../components";
 import { useNavigate } from "react-router-dom";
-import useAnimation from "../utils/hooks/useAnimations";
+import { useGSAP } from "@gsap/react";
+import animate from "../utils/animations";
 
 const About = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -11,11 +12,13 @@ const About = () => {
     setIsPlaying(prevState => !prevState);
   };
 
-  useAnimation([
-    ".anim-about-title",
-    ".anim-about-media-content",
-    ".anim-about-text-content-and-buttons",
-  ]);
+  useGSAP(() => {
+    animate([
+      ".anim-about-title",
+      ".anim-about-media-content",
+      ".anim-about-text-content-and-buttons",
+    ]);
+  }, []);
 
   return (
     <Container>

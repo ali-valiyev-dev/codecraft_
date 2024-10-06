@@ -1,16 +1,18 @@
+import { useGSAP } from "@gsap/react";
 import { Container, SectionHeader } from "../components";
 import { TestimonialItem } from "../components";
 import { TESTIMONIALS } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
 
 const Testimonials = () => {
-  useAnimation([".anim-endrs-title"]);
+  useGSAP(() => {
+    animate([".anim-endrs-title"]);
+  }, []);
 
   return (
     <Container>
       <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* header content */}
-
         <div className="anim-endrs-title">
           <SectionHeader
             title="Testimonials"

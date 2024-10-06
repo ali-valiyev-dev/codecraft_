@@ -4,7 +4,8 @@ import Button from "./Button";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import useAnimation from "../utils/hooks/useAnimations";
+import { useGSAP } from "@gsap/react";
+import animate from "../utils/animations";
 
 const contactSchema = z.object({
   name: z
@@ -32,7 +33,9 @@ const contactSchema = z.object({
 });
 
 const ContactForm = () => {
-  useAnimation([".anim-form"]);
+  useGSAP(() => {
+    animate([".anim-form"]);
+  }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -105,7 +108,7 @@ const ContactForm = () => {
             placeholder="Company Name"
             value={formData.companyName}
             onChange={handleChange}
-            className="w-full p-2 lg:p-4 rounded-md bg-neutral-200 text-neutral-black"
+            className="w-full p-4 rounded-md bg-neutral-200 text-neutral-black"
           />
           {errors.companyName && (
             <p className="text-neutral-red">{errors.companyName}</p>

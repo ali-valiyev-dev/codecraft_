@@ -1,10 +1,14 @@
 import { useEffect, useRef } from "react";
 import SectionHeader from "./SectionHeader";
 import { PARTNER_COMPANY_LOGOS } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import { useGSAP } from "@gsap/react";
+import animate from "../utils/animations";
+import { useLocation } from "react-router-dom";
 
 const TechPartners = () => {
   const carouselRef = useRef(null);
+
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const ul = carouselRef.current;
@@ -13,16 +17,20 @@ const TechPartners = () => {
     ul.nextSibling.setAttribute("aria-hidden", "true");
   }, []);
 
-  useAnimation([".anim-partners"]);
+  useGSAP(() => {
+    animate([".anim-partners-title", ".anim-partners"]);
+  }, [pathname]);
 
   return (
     <div className="w-full mx-auto max-w-screen-2xl">
       <div className="anim-partners flex flex-col items-center justify-center gap-12 xl:gap-16">
-        {/* header content */}
-        <SectionHeader
-          title="Our Tech Partners"
-          subtitle="Leveraging Global Expertise to Empower IT for Business Growth"
-        />
+        {/* section header */}
+        <div className="anim-partners-title">
+          <SectionHeader
+            title="Our Tech Partners"
+            subtitle="Leveraging Global Expertise to Empower IT for Business Growth"
+          />
+        </div>
 
         {/* partner logos carousel */}
         <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">

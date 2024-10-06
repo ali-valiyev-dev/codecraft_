@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import {
   ContactForm,
   Container,
@@ -5,10 +6,12 @@ import {
   SectionHeader,
 } from "../components";
 import { CONTACT_DETAILS } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
 
 const Contacts = () => {
-  useAnimation([".anim-contacts-title", ".anim-contacts-content"]);
+  useGSAP(() => {
+    animate([".anim-contacts-title", ".anim-contacts-content"]);
+  }, []);
 
   return (
     <Container>
@@ -27,13 +30,13 @@ const Contacts = () => {
           <ContactForm />
 
           {/* contact details */}
-          <div className="w-full lg:w-1/2 space-y-10 md:space-y-12">
+          <div className="w-full lg:w-1/2 space-y-5 md:space-y-8">
             {/* contact details header */}
-            <div className="anim-contacts-content space-y-3 md:space-y-4">
-              <h4 className="text-xl lg:text-3xl font-medium">
+            <div className="anim-contacts-content space-y-2">
+              <h4 className="text-primary-blue text-xl lg:text-3xl font-medium">
                 Reach out to our consultants
               </h4>
-              <p className="text-lg xl:text-xl">
+              <p className="">
                 Your questions and requests are always welcome.
               </p>
             </div>

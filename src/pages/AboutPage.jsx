@@ -7,16 +7,20 @@ import {
   TechPartners,
 } from "../components";
 import { TEAM } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
+import { useGSAP } from "@gsap/react";
 
 const AboutPage = () => {
   const navigate = useNavigate();
 
-  useAnimation([
-    ".anim-about-page-title",
-    ".anim-about-page-images",
-    ".anim-about-page-text",
-  ]);
+  useGSAP(() => {
+    animate([
+      ".anim-about-page-title",
+      ".anim-about-page-images",
+      ".anim-about-page-text",
+      ".anim-about-team-title",
+    ]);
+  }, []);
 
   return (
     <Container>
@@ -115,10 +119,12 @@ const AboutPage = () => {
         {/* team */}
         <div className="space-y-6 md:space-y-12">
           {/* team section header */}
-          <SectionHeader
-            title="Rabalon Team"
-            subtitle="Meet Our Leadership"
-          />
+          <div className="anim-about-team-title">
+            <SectionHeader
+              title="Rabalon Team"
+              subtitle="Meet Our Leadership"
+            />
+          </div>
 
           <div className="flex flex-wrap items-stretch justify-center gap-5">
             {TEAM.map((member, index) => (

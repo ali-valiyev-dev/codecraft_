@@ -1,10 +1,13 @@
 import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
+import { useGSAP } from "@gsap/react";
 
 const SolutionCard = ({ icon, title, desc, to }) => {
-  useAnimation([".anim-solution-card"]);
+  useGSAP(() => {
+    animate([".anim-solution-card"]);
+  }, []);
 
   return (
     <Link

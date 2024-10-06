@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
-import useAnimation from "../utils/hooks/useAnimations";
+import { useGSAP } from "@gsap/react";
+import animate from "../utils/animations";
 
 const TestimonialItem = ({ rating, name, role, message, image }) => {
-  useAnimation([".anim-endrs-card"]);
+  useGSAP(() => {
+    animate([".anim-endrs-card"]);
+  }, []);
 
   return (
     <div className="anim-endrs-card max-w-sm flex flex-col justify-between px-3 py-6 border border-primary-dark-blue bg-neutral-white rounded-lg">

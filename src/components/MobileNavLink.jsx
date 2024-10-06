@@ -28,7 +28,7 @@ const NavLink = ({
   const isLink = href && href !== "null";
 
   return (
-    <li className="relative text-2xl text-primary-blue">
+    <li className="relative text-base md:text-2xl text-primary-blue">
       {isLink ? (
         <Link
           to={href}
@@ -68,7 +68,7 @@ const NavLink = ({
             return (
               <li
                 key={index}
-                className={`border-l-8 border-neutral-white px-3 py-3 w-max  ${
+                className={`border-l-8 border-neutral-white p-3 w-max  ${
                   isActive
                     ? "bg-primary-blue bg-opacity-50  border-primary-blue text-neutral-white"
                     : ""
@@ -78,7 +78,7 @@ const NavLink = ({
                   onClick={() => {
                     setIsOpen(false);
                   }}
-                  className="text-xl">
+                  className="text-base md:text-xl">
                   {subLink.label}
                 </Link>
               </li>

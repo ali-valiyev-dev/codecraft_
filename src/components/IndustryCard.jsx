@@ -1,9 +1,12 @@
+import { useGSAP } from "@gsap/react";
 import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
 
 const IndustryCard = ({ icon, title, desc }) => {
-  useAnimation([".anim-industry-card"], []);
+  useGSAP(() => {
+    animate([".anim-industry-card"]);
+  }, [title]);
 
   return (
     <div className="anim-industry-card max-w-[300px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">

@@ -8,17 +8,20 @@ import {
   IndustryCard,
 } from "../components";
 import { INDUSTRIES_DATA } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import animate from "../utils/animations";
+import { useGSAP } from "@gsap/react";
 
 const IndustriesPage = () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  useAnimation([".anim-industry-title", ".anim-industry-accordion-title"], []);
-
   const industries = INDUSTRIES_DATA.find(
     industries => industries.id === params.id
   );
+
+  useGSAP(() => {
+    animate([".anim-industry-title", ".anim-industry-accordion-title"]);
+  }, [params.id]);
 
   useEffect(() => {
     if (!industries) {
@@ -34,7 +37,6 @@ const IndustriesPage = () => {
     <Container>
       <div className="space-y-16 mt-20">
         {/* section header */}
-
         <div className="anim-industry-title">
           <SectionHeader
             title={pageTitle}
@@ -54,7 +56,7 @@ const IndustriesPage = () => {
 
         {/* accordion */}
         <div className="space-y-6">
-          <h2 className="anim-industry-accordion-title text-4xl text-primary-blue font-semibold">
+          <h2 className="anim-industry-accordion-title text-2xl lg:text-3xl text-primary-blue font-semibold">
             {`Our ${pageTitle} Solutions`}
           </h2>
 

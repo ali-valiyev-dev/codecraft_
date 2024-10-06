@@ -2,13 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import { Container, NavButton, SectionHeader } from "../components";
 import CaseStudyItem from "../components/CaseStudyItem";
 import { CASE_STUDIES } from "../constants";
-import useAnimation from "../utils/hooks/useAnimations";
+import { useGSAP } from "@gsap/react";
+import animate from "../utils/animations";
 
 const CaseStudies = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const userHasInteracted = useRef(false);
 
-  useAnimation([".anim-cs-title"]);
+  useGSAP(() => {
+    animate([".anim-cs-title"]);
+  }, []);
 
   const handleNext = () => {
     userHasInteracted.current = true;
