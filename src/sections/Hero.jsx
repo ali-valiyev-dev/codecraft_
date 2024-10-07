@@ -31,7 +31,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="anim-hero-content text-lg lg:text-xl xl:text-2xl text-balance">
+          <p className="anim-hero-content hero-desc-text">
             Rabalon emerged from a realization that small businesses face
             significant hurdles in the digital technology space. Our approach is
             two-pronged: we provide technology consulting services to recommend

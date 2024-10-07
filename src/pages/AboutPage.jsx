@@ -43,11 +43,13 @@ const AboutPage = () => {
                 <div className="flex flex-col gap-2 w-1/2">
                   <img
                     src="/team-1.webp"
+                    loading="lazy"
                     alt="Rabalon team"
                     className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
                   />
                   <img
                     src="/team-3.webp"
+                    loading="lazy"
                     alt="Rabalon team"
                     className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
                   />
@@ -55,6 +57,7 @@ const AboutPage = () => {
                 <div className="w-1/2">
                   <img
                     src="/team-4.webp"
+                    loading="lazy"
                     alt="Rabalon team"
                     className="anim-about-page-images w-full h-full object-cover rounded-sm"
                   />

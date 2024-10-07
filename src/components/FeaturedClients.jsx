@@ -11,6 +11,7 @@ const FeaturedClients = () => {
           <li key={index}>
             <img
               src={logo.src}
+              loading="lazy"
               alt={logo.alt}
               className="h-6 sm:h-12"
             />

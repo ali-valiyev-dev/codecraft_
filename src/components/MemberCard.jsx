@@ -14,6 +14,7 @@ const MemberCard = ({ img, name, position }) => {
         <div className="rounded-md overflow-hidden">
           <img
             src={img}
+            loading="lazy"
             alt={name}
             className="w-full h-auto object-cover"
           />

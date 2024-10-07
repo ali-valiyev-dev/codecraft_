@@ -23,6 +23,7 @@ const CaseStudyItem = ({
         <img
           className="w-full h-full object-cover"
           src={image}
+          loading="lazy"
           alt={imageAlt || `Image of case study: ${title}`}
         />
       </div>

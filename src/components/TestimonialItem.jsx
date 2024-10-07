@@ -33,6 +33,7 @@ const TestimonialItem = ({ rating, name, role, message, image }) => {
       <div className="flex items-center flex-nowrap gap-3">
         <img
           src={image}
+          loading="lazy"
           alt={name}
           className="w-20 h-20 rounded-full object-cover"
         />

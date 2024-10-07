@@ -6,6 +6,7 @@ const Logo = () => {
       <Link to="/">
         <img
           src="/rabalon-logo.webp"
+          loading="lazy"
           alt="Rabalon Logo"
           className="w-40 h-max object-contain"
         />

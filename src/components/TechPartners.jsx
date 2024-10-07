@@ -41,6 +41,7 @@ const TechPartners = () => {
               <li key={index}>
                 <img
                   src={logo.src}
+                  loading="lazy"
                   alt={logo.alt}
                   className="h-8 lg:h-12"
                 />

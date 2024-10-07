@@ -35,3 +35,7 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+.hero-desc-text {
+  @apply text-lg lg:text-xl xl:text-2xl text-balance;
+}

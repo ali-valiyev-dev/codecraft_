@@ -70,6 +70,7 @@ const SolutionsPage = () => {
               <img
                 className="w-full h-full object-cover"
                 src={img}
+                loading="lazy"
                 alt={`${pageTitle} Cover`}
               />
             </div>

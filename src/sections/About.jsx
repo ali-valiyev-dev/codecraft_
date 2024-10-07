@@ -60,6 +60,7 @@ const About = () => {
               <img
                 className="anim-about-img w-full h-full object-cover"
                 src="/about-us-cover.webp"
+                loading="lazy"
                 alt="About cover image of Rabalon"
               />
             )}
