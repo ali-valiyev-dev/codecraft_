@@ -42,10 +42,10 @@ export const NAV_LINKS = [
 ];
 
 export const FEATURED_CLIENTS = [
-  { src: "/aral-group-white-logo.png", alt: "Xalq Bank logo" },
-  { src: "/ferrum-capital-white-logo.png", alt: "Xalq Bank logo" },
-  { src: "/ramco-systems-white-logo.png", alt: "Xalq Bank logo" },
-  { src: "/xalq-bank-white-logo.png", alt: "Xalq Bank logo" },
+  { src: "/aral-group-white-logo.webp", alt: "Xalq Bank logo" },
+  { src: "/ferrum-capital-white-logo.webp", alt: "Xalq Bank logo" },
+  { src: "/ramco-systems-white-logo.webp", alt: "Xalq Bank logo" },
+  { src: "/xalq-bank-white-logo.webp", alt: "Xalq Bank logo" },
 ];
 
 export const TEAM = [
@@ -134,7 +134,7 @@ export const CASE_STUDIES = [
   {
     image: "./ferrum-capital-cover.webp",
     imageAlt: "Image of Ferrum Capital",
-    logo: "./logo.png",
+    logo: "./logo.webp",
     logoAlt: "Logo of Ferrum Capital",
     title:
       "Detecting key cyber-security weaknesses & improve business processes",
@@ -175,7 +175,7 @@ export const TESTIMONIALS = [
     role: "Head of Procurement",
     message:
       "Projects we worked on were delivered on time. The quality of the delivered goods or equipment was suitable for the project.",
-    image: "/gurban-mammadov.png",
+    image: "/gurban-mammadov.webp",
   },
   {
     rating: 5,
@@ -183,7 +183,7 @@ export const TESTIMONIALS = [
     role: "Head of IT",
     message:
       "With the help of the Rabalon company's professional staff, we have achieved our goal on time and at a high level.",
-    image: "/dadash-jafarov.png",
+    image: "/dadash-jafarov.webp",
   },
   {
     rating: 5,
@@ -191,7 +191,7 @@ export const TESTIMONIALS = [
     role: "Head of IT",
     message:
       "With the help of dedicated cyber security solutions provided, we can easily manage the security of our data.",
-    image: "/ram-holding.png",
+    image: "/ram-holding.webp",
   },
 ];
 
@@ -217,27 +217,27 @@ export const CONTACT_DETAILS = [
 ];
 
 export const PARTNER_COMPANY_LOGOS = [
-  { src: "/cisco-logo.png", alt: "Cisco" },
-  { src: "/ibm-logo.png", alt: "IBM" },
-  { src: "/dingo-logo.png", alt: "Dingo" },
-  { src: "/sap-logo.png", alt: "SAP" },
-  { src: "/oracle-logo.png", alt: "Oracle" },
-  { src: "/microsoft-logo.png", alt: "Microsoft" },
-  { src: "/lenovo-logo.png", alt: "Lenovo" },
-  { src: "/dell-emc-logo.png", alt: "Dell EMC" },
-  { src: "/mcafee-logo.png", alt: "McAfee" },
-  { src: "/vmware-logo.png", alt: "VMware" },
-  { src: "/verint-logo.png", alt: "Verint" },
-  { src: "/paloaltonetworks-logo.png", alt: "Palo Alto Networks" },
-  { src: "/shopify-logo.png", alt: "Shopify" },
-  { src: "/riverbed-logo.png", alt: "Riverbed" },
-  { src: "/veritas-technologies-logo.png", alt: "Veritas Technologies" },
-  { src: "/manage-engine-logo.png", alt: "ManageEngine" },
-  { src: "/fortinet-logo.png", alt: "Fortinet" },
-  { src: "/canon-logo.png", alt: "Canon" },
-  { src: "/qnap-logo.png", alt: "QNAP" },
-  { src: "/cyberark-logo.png", alt: "CyberArk" },
-  { src: "/forcepoint-logo.png", alt: "Forcepoint" },
+  { src: "/cisco-logo.webp", alt: "Cisco" },
+  { src: "/ibm-logo.webp", alt: "IBM" },
+  { src: "/dingo-logo.webp", alt: "Dingo" },
+  { src: "/sap-logo.webp", alt: "SAP" },
+  { src: "/oracle-logo.webp", alt: "Oracle" },
+  { src: "/microsoft-logo.webp", alt: "Microsoft" },
+  { src: "/lenovo-logo.webp", alt: "Lenovo" },
+  { src: "/dell-emc-logo.webp", alt: "Dell EMC" },
+  { src: "/mcafee-logo.webp", alt: "McAfee" },
+  { src: "/vmware-logo.webp", alt: "VMware" },
+  { src: "/verint-logo.webp", alt: "Verint" },
+  { src: "/paloaltonetworks-logo.webp", alt: "Palo Alto Networks" },
+  { src: "/shopify-logo.webp", alt: "Shopify" },
+  { src: "/riverbed-logo.webp", alt: "Riverbed" },
+  { src: "/veritas-technologies-logo.webp", alt: "Veritas Technologies" },
+  { src: "/manage-engine-logo.webp", alt: "ManageEngine" },
+  { src: "/fortinet-logo.webp", alt: "Fortinet" },
+  { src: "/canon-logo.webp", alt: "Canon" },
+  { src: "/qnap-logo.webp", alt: "QNAP" },
+  { src: "/cyberark-logo.webp", alt: "CyberArk" },
+  { src: "/forcepoint-logo.webp", alt: "Forcepoint" },
 ];
 
 export const SOLUTIONS_DATA = [

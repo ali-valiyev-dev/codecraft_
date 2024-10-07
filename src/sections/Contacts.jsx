@@ -43,9 +43,9 @@ const Contacts = () => {
           <div className="w-full lg:w-1/2 space-y-5 md:space-y-8">
             {/* contact details header */}
             <div className="anim-contacts-content space-y-2">
-              <h4 className="text-primary-blue text-xl lg:text-3xl font-medium">
+              <h3 className="text-primary-blue text-xl lg:text-3xl font-medium">
                 Reach out to our consultants
-              </h4>
+              </h3>
               <p className="">
                 Your questions and requests are always welcome.
               </p>

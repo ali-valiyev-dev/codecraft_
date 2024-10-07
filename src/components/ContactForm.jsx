@@ -58,9 +58,8 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      toast.success("Submitted successfully!");
-
       contactSchema.parse(formData);
+      toast.success("Submitted successfully!");
 
       setFormData({
         name: "",

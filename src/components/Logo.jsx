@@ -5,7 +5,7 @@ const Logo = () => {
     <div className="flex items-center justify-center">
       <Link to="/">
         <img
-          src="/rabalon-logo.png"
+          src="/rabalon-logo.webp"
           alt="Rabalon Logo"
           className="w-40 h-max object-contain"
         />

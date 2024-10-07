@@ -47,8 +47,15 @@ const About = () => {
                 aria-label="Promo video of Rabalon"
                 crossOrigin="anonymous"
                 onEnded={() => setIsPlaying(false)}
-                preload="metadata"
-              />
+                preload="metadata">
+                <track
+                  kind="captions"
+                  src="/rabalon-team-captions.vtt"
+                  srcLang="en"
+                  label="Video description"
+                />
+                Your browser does not support the video tag.
+              </video>
             ) : (
               <img
                 className="anim-about-img w-full h-full object-cover"
