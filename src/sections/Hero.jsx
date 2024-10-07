@@ -31,11 +31,18 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="anim-hero-content hero-desc-text">
-            Rabalon emerged from a realization that small businesses face
-            significant hurdles in the digital technology space. Our approach is
-            two-pronged: we provide technology consulting services to recommend
-            and implement existing solutions.
+          <p className="anim-hero-content text-lg lg:text-xl xl:text-2xl">
+            <span className="hidden md:inline">
+              Rabalon emerged from a realization that small businesses face
+              significant hurdles in the digital technology space. Our approach
+              is two-pronged: we provide technology consulting services to
+              recommend and implement existing solutions.
+            </span>
+
+            <span className="md:hidden">
+              Rabalon helps small businesses overcome digital tech challenges
+              through consulting and solution implementation.
+            </span>
           </p>
         </div>
 
