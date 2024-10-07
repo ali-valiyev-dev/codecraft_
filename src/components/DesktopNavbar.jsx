@@ -33,7 +33,7 @@ const DesktopNavbar = () => {
       <nav className="relative hidden xl:block">
         <NavLinksWrapper>
           {NAV_LINKS.map((link, index) => (
-            <div
+            <li
               key={index}
               onMouseEnter={() => handleMouseEnter(link.label)}
               onMouseLeave={handleMouseLeave}
@@ -42,7 +42,7 @@ const DesktopNavbar = () => {
               {link.dropdownItems && dropdown === link.label && (
                 <DropdownMenu items={link.dropdownItems} />
               )}
-            </div>
+            </li>
           ))}
         </NavLinksWrapper>
       </nav>

@@ -28,7 +28,7 @@ const TechPartners = () => {
         <div className="anim-partners-title">
           <SectionHeader
             title="Our Tech Partners"
-            subtitle="Leveraging Global Expertise to Empower IT for Business Growth"
+            subtitle="Global Expertise: Collaborations that Drive Growth and IT Success."
           />
         </div>
 

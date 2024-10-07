@@ -27,7 +27,7 @@ const About = () => {
         <div className="anim-about-title">
           <SectionHeader
             title="Who We Are"
-            subtitle="Epic Beginnings: Unveiling Our Essence, Crafting Futures with Excellence."
+            subtitle="A Journey of Innovation: Shaping the Future with Purpose and Skill."
           />
         </div>
 
@@ -43,7 +43,7 @@ const About = () => {
                 autoPlay
                 controls
                 playsInline
-                poster="/about-us-cover.jpg"
+                poster="/about-us-cover.webp"
                 aria-label="Promo video of Rabalon"
                 crossOrigin="anonymous"
                 onEnded={() => setIsPlaying(false)}
@@ -52,7 +52,7 @@ const About = () => {
             ) : (
               <img
                 className="anim-about-img w-full h-full object-cover"
-                src="/about-us-cover.jpg"
+                src="/about-us-cover.webp"
                 alt="About cover image of Rabalon"
               />
             )}

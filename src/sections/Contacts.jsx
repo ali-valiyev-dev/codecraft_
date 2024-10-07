@@ -30,7 +30,7 @@ const Contacts = () => {
         <div className="anim-contacts-title">
           <SectionHeader
             title="Get In Touch"
-            subtitle="Connect for Excellence: Your Gateway to Exceptional Solutions."
+            subtitle="Connect for Tailored IT Solutions That Drive Your Business Forward."
           />
         </div>
 

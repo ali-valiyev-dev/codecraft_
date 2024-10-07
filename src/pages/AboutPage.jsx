@@ -42,19 +42,19 @@ const AboutPage = () => {
               <div className=" flex gap-2">
                 <div className="flex flex-col gap-2 w-1/2">
                   <img
-                    src="/team-1.jpg"
+                    src="/team-1.webp"
                     alt="Rabalon team"
                     className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
                   />
                   <img
-                    src="/team-3.jpg"
+                    src="/team-3.webp"
                     alt="Rabalon team"
                     className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
                   />
                 </div>
                 <div className="w-1/2">
                   <img
-                    src="/team-4.jpg"
+                    src="/team-4.webp"
                     alt="Rabalon team"
                     className="anim-about-page-images w-full h-full object-cover rounded-sm"
                   />
@@ -122,7 +122,7 @@ const AboutPage = () => {
           <div className="anim-about-team-title">
             <SectionHeader
               title="Rabalon Team"
-              subtitle="Meet Our Leadership"
+              subtitle="Meet Our Visionary Leaders Driving Innovation and Our Path to Success."
             />
           </div>
 

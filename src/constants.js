@@ -50,17 +50,17 @@ export const FEATURED_CLIENTS = [
 
 export const TEAM = [
   {
-    img: "/ramin-iskenderov.jpg",
+    img: "/ramin-iskenderov.webp",
     name: "Ramin Iskandarov",
     position: "Founder / CEO",
   },
   {
-    img: "/mahir-iskender.jpg",
+    img: "/mahir-iskender.webp",
     name: "Mahir Iskender",
     position: "Co-Founder",
   },
   {
-    img: "/sakina-iskender.jpg",
+    img: "/sakina-iskender.webp",
     name: "Sakina Iskender",
     position: "COO",
   },
@@ -132,7 +132,7 @@ export const STATS = [
 
 export const CASE_STUDIES = [
   {
-    image: "./ferrum-capital-cover.jpg",
+    image: "./ferrum-capital-cover.webp",
     imageAlt: "Image of Ferrum Capital",
     logo: "./logo.png",
     logoAlt: "Logo of Ferrum Capital",
@@ -144,7 +144,7 @@ export const CASE_STUDIES = [
       "We conducted a deep audit of three major blocks: Wired and wireless data network, Unified communications, Information Security.",
   },
   {
-    image: "./xalq-bank-cover.jpg",
+    image: "./xalq-bank-cover.webp",
     imageAlt: "Image of Xalq Bank",
     logo: "./xalq-bank-logo.svg",
     logoAlt: "Logo of Xalq Bank",
@@ -155,7 +155,7 @@ export const CASE_STUDIES = [
       "In Xalq bank our team has integrated new software program that made it possible to track and monitor processes while they are running, which can improve accountability and visibility. New software helps Xalq bank focus on process and operational excellence to exceed customer expectations.",
   },
   {
-    image: "./aral-group-cover.jpg",
+    image: "./aral-group-cover.webp",
     imageAlt: "Image of Aral Group",
     logo: "./aral-group-logo.svg",
     logoAlt: "Logo of Aral Group",
@@ -217,36 +217,36 @@ export const CONTACT_DETAILS = [
 ];
 
 export const PARTNER_COMPANY_LOGOS = [
-  { src: "/cisco-logo.png", alt: "Facebook" },
-  { src: "/ibm-logo.png", alt: "Facebook" },
-  { src: "/dingo-logo.png", alt: "Facebook" },
-  { src: "/sap-logo.png", alt: "Facebook" },
-  { src: "/oracle-logo.png", alt: "Facebook" },
-  { src: "/microsoft-logo.png", alt: "Facebook" },
-  { src: "/lenovo-logo.png", alt: "Facebook" },
-  { src: "/dell-emc-logo.png", alt: "Facebook" },
-  { src: "/mcafee-logo.png", alt: "Facebook" },
-  { src: "/vmware-logo.png", alt: "Facebook" },
-  { src: "/verint-logo.png", alt: "Facebook" },
-  { src: "/paloaltonetworks-logo.png", alt: "Facebook" },
-  { src: "/shopify-logo.png", alt: "Facebook" },
-  { src: "/riverbed-logo.png", alt: "Facebook" },
-  { src: "/veritas-technologies-logo.png", alt: "Facebook" },
-  { src: "/manage-engine-logo.png", alt: "Facebook" },
-  { src: "/fortinet-logo.png", alt: "Facebook" },
-  { src: "/canon-logo.png", alt: "Facebook" },
-  { src: "/qnap-logo.png", alt: "Facebook" },
-  { src: "/cyberark-logo.png", alt: "Facebook" },
-  { src: "/forcepoint-logo.png", alt: "Facebook" },
+  { src: "/cisco-logo.png", alt: "Cisco" },
+  { src: "/ibm-logo.png", alt: "IBM" },
+  { src: "/dingo-logo.png", alt: "Dingo" },
+  { src: "/sap-logo.png", alt: "SAP" },
+  { src: "/oracle-logo.png", alt: "Oracle" },
+  { src: "/microsoft-logo.png", alt: "Microsoft" },
+  { src: "/lenovo-logo.png", alt: "Lenovo" },
+  { src: "/dell-emc-logo.png", alt: "Dell EMC" },
+  { src: "/mcafee-logo.png", alt: "McAfee" },
+  { src: "/vmware-logo.png", alt: "VMware" },
+  { src: "/verint-logo.png", alt: "Verint" },
+  { src: "/paloaltonetworks-logo.png", alt: "Palo Alto Networks" },
+  { src: "/shopify-logo.png", alt: "Shopify" },
+  { src: "/riverbed-logo.png", alt: "Riverbed" },
+  { src: "/veritas-technologies-logo.png", alt: "Veritas Technologies" },
+  { src: "/manage-engine-logo.png", alt: "ManageEngine" },
+  { src: "/fortinet-logo.png", alt: "Fortinet" },
+  { src: "/canon-logo.png", alt: "Canon" },
+  { src: "/qnap-logo.png", alt: "QNAP" },
+  { src: "/cyberark-logo.png", alt: "CyberArk" },
+  { src: "/forcepoint-logo.png", alt: "Forcepoint" },
 ];
 
 export const SOLUTIONS_DATA = [
   {
     id: "software_development",
-    pageTitle: "Software Development Solutions",
+    pageTitle: "Software Development",
     pageSubtitle:
-      "We offer tailor-made software development solutions to help your business grow",
-    img: "/software-development-cover.jpg",
+      "Custom Software Solutions That Accelerate Growth and Business Impact.",
+    img: "/software-development-cover.webp",
     title:
       "On target software development for SMEs, Startups, large enterprises & Institutions",
     desc: "Rabalon offers full-stack, multidisciplinary software development solutions. We start with a detailed discussion of your business and technology challenges and goals. Then we develop a strategy that will cope with challenges, ensure success, and provide you with the most exemplary software development services.",
@@ -275,10 +275,10 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "cloud_solutions",
-    pageTitle: "Cloud Solutions",
+    pageTitle: "Cloud",
     pageSubtitle:
-      "Transform your cloud experience with public & private cloud solutions",
-    img: "/cloud-solutions-cover.jpg",
+      "Transform Your Cloud Experience with Public and Private Cloud Solutions.",
+    img: "/cloud-solutions-cover.webp",
     title:
       "Cloud solutions that are Efficiently scalable, easily manageable, undeniably powerful",
     desc: "As one of the most steadfast cloud solution providers, Rabalon helps you in accelerating business agility through reduced cost, simplifying coding, and maximizing ROI by delivering computing services like servers, storage, databases, networking, software, analytics & storage. Be it cloud applications development, cloud architecture design, cloud migration, DevOps, cloud infrastructure & data, ML & AI-powered applications such as SaaS, PaaS, and IaaS environments, our cloud experts would deal with it effortlessly for your business.",
@@ -307,10 +307,10 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "data_science_and_artificial_intelligence",
-    pageTitle: "Data Science & AI Solutions",
+    pageTitle: "Data Science & AI",
     pageSubtitle:
-      "Revolutionize your business by turning big data into meaningful insights with Rabalon’s Data Science and AI solutions.",
-    img: "/data-science-and-artificial-intelligence-cover.jpg",
+      "Turn Data into Insights with Our Expert AI and Data Science Solutions.",
+    img: "/data-science-and-artificial-intelligence-cover.webp",
     title: "Solve complex problems fast & Increase Business Efficiency",
     desc: `"AI technology can enhance business productivity by up to 40%," according to Accenture, and the intersection of Big Data with AI will help businesses gain valuable insights into customer intent, predict trends, make connections, and identify issues before they occur, with Rabalon's experts providing innovative Data Science & AI solutions to improve efficiency, boost sales, manage risks effectively, and deliver an exceptional user interface.`,
     accordionData: [
@@ -334,10 +334,10 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "infrastructure_solutions",
-    pageTitle: "Infrastructure Solutions",
+    pageTitle: "Infrastructure",
     pageSubtitle:
-      "IT infrastructure solutions that are secure, flexible, and reliable that aid businesses in significantly reducing costs and boosting revenues",
-    img: "/infrastructure-solutions-cover.jpg",
+      "Flexible IT Infrastructure Solutions That Lower Costs and Boost Growth.",
+    img: "/infrastructure-solutions-cover.webp",
     title: "Focus more on your core business & less on",
     desc: "An effective IT infrastructure will continue to serve you and your employees through all the steps of your business. When your company blooms, it will protect it from cyber attacks making it secure. Whenever you need new solutions to evolve it will be easily scalable fitting your never-ending requirements.",
     accordionData: [
@@ -366,10 +366,10 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "iot_solutions",
-    pageTitle: "IoT Solutions",
+    pageTitle: "IoT",
     pageSubtitle:
-      "Connecting the physical and digital worlds to develop an intelligent ecosystem that adds value to your business.",
-    img: "/iot-solutions-cover.jpg",
+      "Connecting the Physical and Digital to Build Smarter Business Systems.",
+    img: "/iot-solutions-cover.webp",
     title:
       "Driving innovation across industries looking for growth opportunities and operational efficiencies",
     desc: "At Rabalon, we deliver value-centered IoT solutions by setting up multi-level data pipelines, from edge computing to cloud data processing and data science, working closely with you to understand your business needs and create custom IoT solutions. Additionally, you can remotely hire our expert development team to build entirely new IoT-supported infrastructures.",
@@ -399,10 +399,10 @@ export const SOLUTIONS_DATA = [
   },
   {
     id: "security_solutions",
-    pageTitle: "Cyber Security Solutions",
+    pageTitle: "Cyber Security",
     pageSubtitle:
-      "Secure and strengthen your enterprise with Rabalon’s integrated network security solutions.",
-    img: "/security-solutions-cover.jpg",
+      "Protect and Strengthen Your Enterprise with Robust Cybersecurity Solutions.",
+    img: "/security-solutions-cover.webp",
     title:
       "Enable your business with intelligence and expertise providing a new level of cyber-immunity",
     desc: "We deliver tailored security solutions to identify and resolve your security pain points, covering Data Security, Network Security, Endpoint Protection, and Camera and Access Control, utilizing industry-leading measures to develop a comprehensive security strategy that includes network segmentation, systems implementations, testing, 24/7 monitoring, vulnerability and patch management, as well as compliance audits to protect your company from crippling threat events",
@@ -437,7 +437,7 @@ export const INDUSTRIES_DATA = [
     id: "public_sector",
     pageTitle: "Public Sector",
     pageSubtitle:
-      "We develop public sector IT solutions and software that integrate web services, mobile channels, and applications on a single platform.",
+      "IT Solutions that Unify Platforms for a Streamlined Public Sector.",
 
     cardsData: [
       {
@@ -484,7 +484,7 @@ export const INDUSTRIES_DATA = [
     id: "healthcare",
     pageTitle: "Healthcare",
     pageSubtitle:
-      "We offer healthcare software development services that enable our clients to experience the edge of new technologies, provide great patient care, and create a robust and integrated healthcare ecosystem.",
+      "Empowering Healthcare with Tech to Enhance Care and Integration.",
 
     cardsData: [
       {
@@ -536,7 +536,7 @@ export const INDUSTRIES_DATA = [
     id: "hospitality",
     pageTitle: "Hospitality",
     pageSubtitle:
-      "We aim to develop custom software solutions to optimize your workflow, improve customer experience and meet ever-changing demands.",
+      "Custom Software to Enhance Guest Experience and Optimize Operations.",
 
     cardsData: [
       {
@@ -579,7 +579,7 @@ export const INDUSTRIES_DATA = [
     id: "retail",
     pageTitle: "Retail",
     pageSubtitle:
-      "Enabling retail businesses to digitize their offerings and reach a wider audience effectively.",
+      "Digital Solutions to Expand Retail Reach and Engage Wider Audiences.",
 
     cardsData: [
       {

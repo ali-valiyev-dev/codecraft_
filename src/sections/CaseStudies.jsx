@@ -43,7 +43,7 @@ const CaseStudies = () => {
         <div className="anim-cs-title">
           <SectionHeader
             title="Latest Case Studies"
-            subtitle="From Challenge to Victory: Exploring Case Studies of Innovation and Excellence"
+            subtitle="Innovative Solutions to Challenges, Showcasing Success and Triumph."
           />
         </div>
 

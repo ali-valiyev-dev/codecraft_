@@ -5,7 +5,7 @@ const NavLink = ({ href, label }) => {
   const isLink = href && href !== "null";
 
   return (
-    <li className="relative">
+    <div className="relative">
       {isLink ? (
         <Link
           to={href}
@@ -17,7 +17,7 @@ const NavLink = ({ href, label }) => {
           {label}
         </div>
       )}
-    </li>
+    </div>
   );
 };
 

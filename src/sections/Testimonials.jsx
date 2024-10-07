@@ -16,7 +16,7 @@ const Testimonials = () => {
         <div className="anim-endrs-title">
           <SectionHeader
             title="Testimonials"
-            subtitle="Voices of Trust: Client Stories, Testimonials that Illuminate Our Shared Success."
+            subtitle="Client Voices: Real Stories of Success and Trust in Our Solutions."
           />
         </div>
 
