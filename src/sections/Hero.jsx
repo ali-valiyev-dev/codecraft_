@@ -16,6 +16,8 @@ const Hero = () => {
         autoPlay
         muted
         loop
+        preload="none"
+        playsInline
         aria-label="Background video of Rabalon"
       />
 
