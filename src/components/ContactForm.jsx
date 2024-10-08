@@ -18,6 +18,7 @@ const contactSchema = z.object({
     .max(100, "Company Name cannot exceed 100 characters"),
   email: z
     .string()
+    .trim()
     .email("Invalid email address")
     .max(100, "Email cannot exceed 100 characters"),
   tel: z

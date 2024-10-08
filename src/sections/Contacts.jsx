@@ -35,7 +35,7 @@ const Contacts = () => {
         </div>
 
         {/* main content */}
-        <div className="w-full flex flex-col-reverse lg:flex-row gap-6 xl:gap-12 text-primary-very-dark-blue">
+        <div className="w-full flex flex-col-reverse lg:flex-row gap-6 xl:gap-12 text-neutral-800">
           {/* contact form */}
           <ContactForm />
 
@@ -43,10 +43,10 @@ const Contacts = () => {
           <div className="w-full lg:w-1/2 space-y-5 md:space-y-8">
             {/* contact details header */}
             <div className="anim-contacts-content space-y-2">
-              <h3 className="text-primary-blue text-xl lg:text-3xl font-medium">
+              <h3 className="text-primary-blue text-xl lg:text-2xl font-medium">
                 Reach out to our consultants
               </h3>
-              <p className="">
+              <p className="md:text-lg">
                 Your questions and requests are always welcome.
               </p>
             </div>

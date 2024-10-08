@@ -30,22 +30,24 @@ const CaseStudyItem = ({
 
       {/* rightside content */}
       <div className="w-full lg:w-1/2 flex flex-col gap-12">
-        <div className="lg:text-lg xl:text-xl text-primary-blue">
+        <div className="lg:text-lg text-neutral-800">
           <div className="anim-cs-text flex flex-col gap-6">
             <img
               className="w-max h-10 object-cover"
               src={logo}
               alt={logoAlt || `${title} logo`}
             />
-            <h3 className="text-2xl font-semibold">{title}</h3>
+            <h3 className="text-xl lg:text-2xl font-semibold text-primary-blue">
+              {title}
+            </h3>
           </div>
 
           <div className="anim-cs-text">
-            <h4 className="mt-5 text-neutral-500">Overview</h4>
+            <h4 className="mt-5 text-primary-blue">Overview</h4>
             <p className="mt-1">{overview}</p>
           </div>
           <div className="anim-cs-text">
-            <h4 className="mt-5 text-neutral-500">
+            <h4 className="mt-5 text-primary-blue">
               {index === 0 ? "What we did?" : "Achievement"}
             </h4>
             <p className="mt-1">{achievement}</p>

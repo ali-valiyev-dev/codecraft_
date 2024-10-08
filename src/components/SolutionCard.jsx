@@ -29,7 +29,9 @@ const SolutionCard = ({ icon, title, desc, to }) => {
 
         <hr className="w-1/2 h-[1px] bg-primary-dark-blue group-hover:bg-neutral-white border-0 my-6 lg:my-9" />
 
-        <p className="text-md lg:text-lg">{desc}</p>
+        <p className="text-lg text-neutral-800 group-hover:text-neutral-white">
+          {desc}
+        </p>
       </div>
 
       <div className="flex flex-col items-center justify-center mt-6 lg:mt-8">

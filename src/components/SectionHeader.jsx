@@ -8,7 +8,7 @@ const SectionHeader = ({ title, subtitle }) => {
       </h2>
 
       <div className="max-w-[700px]">
-        <p className="text-primary-blue text-lg md:text-xl lg:text-2xl xl:text-3xl uppercase">
+        <p className="text-primary-blue text-lg lg:text-xl xl:text-2xl uppercase">
           {subtitle}
         </p>
       </div>

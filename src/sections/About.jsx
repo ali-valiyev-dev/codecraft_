@@ -69,7 +69,7 @@ const About = () => {
           {/* Right Side Content */}
           <div className="w-full lg:w-1/2 flex flex-col gap-12 xl:pr-12">
             {/* Text Content */}
-            <p className="anim-about-text-content-and-buttons lg:text-lg xl:text-xl text-primary-blue">
+            <p className="anim-about-text-content-and-buttons lg:text-lg xl:text-xl text-neutral-800">
               Rabalon is an IT service provider helping companies with
               innovative solutions. We always prioritize our client’s best
               interests. Our dedicated and expert team develops cutting-edge

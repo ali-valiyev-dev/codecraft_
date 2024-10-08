@@ -23,7 +23,7 @@ const IndustryCard = ({ icon, title, desc }) => {
 
         <hr className="w-1/2 h-[1px] bg-neutral-white border-0 my-9" />
 
-        <p className="text-md lg:text-lg">{desc}</p>
+        <p className="text-md lg:text-lg text-neutral-800">{desc}</p>
       </div>
     </div>
   );

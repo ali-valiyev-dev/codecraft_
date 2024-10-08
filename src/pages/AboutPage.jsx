@@ -69,7 +69,7 @@ const AboutPage = () => {
             <div className="w-full lg:w-1/2 flex flex-col space-y-6">
               {/* text content */}
 
-              <article className="text-neutral-600 text-base md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4">
+              <article className="text-neutral-800 text-base md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4">
                 <h1 className="anim-about-page-text text-2xl md:text-3xl xl:text-4xl text-primary-blue font-semibold">
                   Fostering Business Growth
                 </h1>

@@ -28,7 +28,7 @@ const NavLink = ({
   const isLink = href && href !== "null";
 
   return (
-    <li className="relative text-base md:text-2xl text-primary-blue">
+    <li className="relative sm:text-xl text-primary-blue">
       {isLink ? (
         <Link
           to={href}
