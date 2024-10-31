@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
 import { formatPhoneNumber } from "../utils/helpers";
 import { useGSAP } from "@gsap/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
 
 const OfficeLocationCard = ({
   countryFlag,

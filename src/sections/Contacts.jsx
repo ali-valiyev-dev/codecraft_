@@ -2,17 +2,26 @@ import { useGSAP } from "@gsap/react";
 import {
   ContactForm,
   Container,
+  Loading,
   OfficeLocationCard,
   SectionHeader,
 } from "../components";
-import { CONTACT_DETAILS } from "../constants";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
 import { ToastContainer } from "react-toastify";
+import { useFetchData } from "../hooks";
 
 const Contacts = () => {
+  const { data: contacts, loading, error } = useFetchData("contacts", "*");
+
   useGSAP(() => {
-    animate([".anim-contacts-title", ".anim-contacts-content"]);
-  }, []);
+    if (!loading) {
+      animate([".anim-contacts-title", ".anim-contacts-content"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <Container>
@@ -38,7 +47,6 @@ const Contacts = () => {
         <div className="w-full flex flex-col-reverse lg:flex-row gap-6 xl:gap-12 text-neutral-800">
           {/* contact form */}
           <ContactForm />
-
           {/* contact details */}
           <div className="w-full lg:w-1/2 space-y-5 md:space-y-8">
             {/* contact details header */}
@@ -53,10 +61,10 @@ const Contacts = () => {
 
             <div className="flex flex-col md:flex-row gap-8 md:gap-10">
               {/* branch contacts cards */}
-              {CONTACT_DETAILS.map((item, index) => (
+              {contacts.map(office => (
                 <OfficeLocationCard
-                  key={index}
-                  {...item}
+                  key={office._id}
+                  {...office}
                 />
               ))}
             </div>

@@ -1,45 +1,56 @@
 import { useState, useEffect, useRef } from "react";
-import { Container, NavButton, SectionHeader } from "../components";
+import { Container, Loading, NavButton, SectionHeader } from "../components";
 import CaseStudyItem from "../components/CaseStudyItem";
-import { CASE_STUDIES } from "../constants";
 import { useGSAP } from "@gsap/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
+import { useFetchData } from "../hooks";
 
 const CaseStudies = () => {
+  const {
+    data: caseStudies,
+    loading,
+    error,
+  } = useFetchData("case_studies", "*");
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const userHasInteracted = useRef(false);
 
-  useGSAP(() => {
-    animate([".anim-cs-title"]);
-  }, []);
-
   const handleNext = () => {
     userHasInteracted.current = true;
-    setCurrentIndex(prevIndex => (prevIndex + 1) % CASE_STUDIES.length);
+    setCurrentIndex(prevIndex => (prevIndex + 1) % caseStudies.length);
   };
 
   const handlePrev = () => {
     userHasInteracted.current = true;
     setCurrentIndex(prevIndex =>
-      prevIndex === 0 ? CASE_STUDIES.length - 1 : prevIndex - 1
+      prevIndex === 0 ? caseStudies.length - 1 : prevIndex - 1
     );
   };
 
   useEffect(() => {
     if (!userHasInteracted.current) {
       const interval = setInterval(() => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % CASE_STUDIES.length);
+        setCurrentIndex(prevIndex => (prevIndex + 1) % caseStudies.length);
       }, 5000);
 
       return () => clearInterval(interval);
     }
-  }, [currentIndex]);
+  }, [currentIndex, caseStudies.length]);
+
+  useGSAP(() => {
+    if (!loading) {
+      animate([".anim-cs-title"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <Container>
       <div className="flex flex-col items-center justify-center gap-12 xl:gap-16">
         {/* header content */}
-
         <div className="anim-cs-title">
           <SectionHeader
             title="Latest Case Studies"
@@ -52,15 +63,12 @@ const CaseStudies = () => {
           <div
             className="flex transition-transform duration-500"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-            {CASE_STUDIES.map((caseStudy, index) => (
+            {caseStudies.map(caseStudy => (
               <div
                 className="w-full flex-shrink-0"
-                key={index}
+                key={caseStudy._id}
                 style={{ width: "100%" }}>
-                <CaseStudyItem
-                  {...caseStudy}
-                  index={index}
-                />
+                <CaseStudyItem {...caseStudy} />
               </div>
             ))}
           </div>

@@ -7,12 +7,15 @@ import {
   MobileNavLink,
   SocialLink,
 } from "../components";
-import { NAV_LINKS, SOCIAL_LINKS } from "../constants";
+import { NAV_LINKS } from "../constants";
 import { useNavigate } from "react-router-dom";
+import { useFetchData } from "../hooks";
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+
+  const { data: social_links, error } = useFetchData("social_links", "*");
 
   const navigate = useNavigate();
 
@@ -38,6 +41,8 @@ const MobileNavbar = () => {
     navigate("/contacts");
     setIsOpen(false);
   };
+
+  if (error) return null;
 
   return (
     <div className="flex xl:hidden items-center">
@@ -87,7 +92,7 @@ const MobileNavbar = () => {
           </NavLinksWrapper>
 
           <div className="absolute bottom-0 left-0 flex items-center justify-center w-full gap-5 py-4">
-            {SOCIAL_LINKS.map((link, index) => (
+            {social_links.map((link, index) => (
               <SocialLink
                 color="text-primary-blue"
                 key={index}

@@ -5,9 +5,9 @@ const Logo = () => {
     <div className="flex items-center justify-center">
       <Link to="/">
         <img
-          src="/rabalon-logo.webp"
+          src="/codecraft-darkmode-logo.webp"
           loading="lazy"
-          alt="Rabalon Logo"
+          alt="Codecraft_ Logo"
           className="w-40 h-max object-contain"
         />
       </Link>

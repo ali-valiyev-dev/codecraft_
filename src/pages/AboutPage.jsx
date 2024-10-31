@@ -2,25 +2,32 @@ import { useNavigate } from "react-router-dom";
 import {
   Button,
   Container,
+  ImagesGrid,
+  Loading,
   MemberCard,
   SectionHeader,
-  TechPartners,
 } from "../components";
-import { TEAM } from "../constants";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
 import { useGSAP } from "@gsap/react";
+import { useFetchData } from "../hooks";
+import { TechPartners } from "../sections";
 
 const AboutPage = () => {
+  const { data: about, loading, error } = useFetchData("about", "*");
+
+  const aboutContent = about[0];
+
   const navigate = useNavigate();
 
   useGSAP(() => {
-    animate([
-      ".anim-about-page-title",
-      ".anim-about-page-images",
-      ".anim-about-page-text",
-      ".anim-about-team-title",
-    ]);
-  }, []);
+    if (!loading) {
+      animate([".anim-about-page-content"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <Container>
@@ -28,7 +35,7 @@ const AboutPage = () => {
         {/* about company */}
         <div className="flex flex-col items-center justify-center gap-6 md:gap-8">
           {/* header */}
-          <div className="anim-about-page-title">
+          <div className="anim-about-page-content">
             <SectionHeader
               title="About Us"
               subtitle="Epic Beginnings: Unveiling Our Essence, Crafting Futures with Excellence."
@@ -39,73 +46,38 @@ const AboutPage = () => {
           <div className="w-full flex flex-col lg:flex-row gap-6 xl:gap-12">
             {/* leftside image content */}
             <div className="w-full lg:w-1/2 rounded-lg overflow-hidden">
-              <div className=" flex gap-2">
-                <div className="flex flex-col gap-2 w-1/2">
-                  <img
-                    src="/team-1.webp"
-                    loading="lazy"
-                    alt="Rabalon team"
-                    className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
-                  />
-                  <img
-                    src="/team-3.webp"
-                    loading="lazy"
-                    alt="Rabalon team"
-                    className="anim-about-page-images w-full h-1/2 object-cover rounded-sm"
-                  />
-                </div>
-                <div className="w-1/2">
-                  <img
-                    src="/team-4.webp"
-                    loading="lazy"
-                    alt="Rabalon team"
-                    className="anim-about-page-images w-full h-full object-cover rounded-sm"
-                  />
-                </div>
-              </div>
+              <ImagesGrid />
             </div>
 
             {/* rightside text content */}
             <div className="w-full lg:w-1/2 flex flex-col space-y-6">
               {/* text content */}
-
-              <article className="text-neutral-800 text-base md:text-lg lg:text-xl flex flex-col gap-3 md:gap-4">
-                <h1 className="anim-about-page-text text-2xl md:text-3xl xl:text-4xl text-primary-blue font-semibold">
-                  Fostering Business Growth
+              <article className="text-neutral-800 text-base md:text-lg lg:text-xl flex flex-col gap-3 md:gap-6">
+                <h1 className="anim-about-page-content text-2xl md:text-3xl xl:text-4xl text-primary-blue font-semibold">
+                  {aboutContent.title}
                 </h1>
 
-                <p className="anim-about-page-text">
-                  Rabalon emerged in 2019, as an IT service provider and is
-                  helping companies with its innovative solutions. We always
-                  keep the client’s best interest in mind. Our dedicated and
-                  expert team helps us develop cutting-edge solutions that bring
-                  value to our clients and help in business growth.
+                <p className="anim-about-page-content">
+                  {aboutContent.history}
                 </p>
 
-                <div className="anim-about-page-text">
+                <div className="anim-about-page-content">
                   <h3 className="font-semibold text-primary-blue text-lg md:text-xl">
                     Our Mission
                   </h3>
-                  <p>
-                    We strive to make our clients&apos; dreams true by offering
-                    them practical solutions in the form of secure, scalable,
-                    and feature-rich software.
-                  </p>
+                  <p>{aboutContent.mission}</p>
                 </div>
 
-                <div className="anim-about-page-text">
+                <div className="anim-about-page-content">
                   <h3 className="font-semibold text-primary-blue text-lg md:text-xl">
                     Our Vision
                   </h3>
-                  <p>
-                    Our vision is to enable our clients to discover the digital
-                    world and set their goals and objectives.
-                  </p>
+                  <p>{aboutContent.vision}</p>
                 </div>
               </article>
 
               {/* button */}
-              <div className="anim-about-page-text">
+              <div className="anim-about-page-content">
                 <Button
                   title="Reach Out To Us"
                   icon="lucide:arrow-right"
@@ -122,17 +94,17 @@ const AboutPage = () => {
         {/* team */}
         <div className="space-y-6 md:space-y-12">
           {/* team section header */}
-          <div className="anim-about-team-title">
+          <div className="anim-about-page-content">
             <SectionHeader
-              title="Rabalon Team"
+              title="Management"
               subtitle="Meet Our Visionary Leaders Driving Innovation and Our Path to Success."
             />
           </div>
 
           <div className="flex flex-wrap items-stretch justify-center gap-5">
-            {TEAM.map((member, index) => (
+            {aboutContent.team.map(member => (
               <MemberCard
-                key={index}
+                key={member.id}
                 {...member}
               />
             ))}

@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
 import { useGSAP } from "@gsap/react";
 
 const Accordion = ({ data }) => {
@@ -10,7 +10,7 @@ const Accordion = ({ data }) => {
 
   useGSAP(() => {
     animate([".anim-accordion-content"]);
-  }, [data]);
+  }, []);
 
   const toggleIndex = index => {
     setActiveIndex(activeIndex === index ? 0 : index);

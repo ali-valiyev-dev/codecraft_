@@ -1,12 +1,20 @@
 import { useGSAP } from "@gsap/react";
-import { Container, SectionHeader, SolutionCard } from "../components";
-import { SOLUTIONS } from "../constants";
-import animate from "../utils/animations";
+import { Container, Loading, SectionHeader, SolutionCard } from "../components";
+import { useFetchData } from "../hooks";
+import animate from "../utils/animate";
 
 const Solutions = () => {
+  const { data, loading, error } = useFetchData("solutions", "*");
+
   useGSAP(() => {
-    animate([".anim-solutions-title"]);
-  }, []);
+    if (!loading) {
+      animate([".anim-solutions-title"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <Container>
@@ -18,9 +26,9 @@ const Solutions = () => {
           />
         </div>
         <div className="flex flex-wrap items-stretch justify-center gap-4 lg:gap-6 xl:gap-8">
-          {SOLUTIONS.map((solution, index) => (
+          {data.map(solution => (
             <SolutionCard
-              key={index}
+              key={solution._id}
               {...solution}
             />
           ))}

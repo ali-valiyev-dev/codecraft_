@@ -1,9 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import PropTypes from "prop-types";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
+import { useFetchMedia, useLoadingState } from "../hooks";
+import Loading from "./Loading";
 
 const CaseStudyItem = ({
-  index,
   image,
   imageAlt,
   logo,
@@ -12,9 +13,20 @@ const CaseStudyItem = ({
   overview,
   achievement,
 }) => {
+  const { mediaSrc: coverImage } = useFetchMedia("images", image);
+  const { mediaSrc: companyLogo } = useFetchMedia("images", logo);
+
+  const { loading, error } = useLoadingState(coverImage, companyLogo);
+
   useGSAP(() => {
-    animate([".anim-cs-img", ".anim-cs-text"]);
-  }, []);
+    if (!loading) {
+      animate([".anim-cs-img", ".anim-cs-text"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <div className="w-full h-full flex flex-col lg:flex-row gap-6 xl:gap-12">
@@ -22,9 +34,9 @@ const CaseStudyItem = ({
       <div className="anim-cs-img lg:w-1/2 max-h-[510px] rounded-lg overflow-hidden ">
         <img
           className="w-full h-full object-cover"
-          src={image}
+          src={coverImage}
           loading="lazy"
-          alt={imageAlt || `Image of case study: ${title}`}
+          alt={imageAlt}
         />
       </div>
 
@@ -34,8 +46,8 @@ const CaseStudyItem = ({
           <div className="anim-cs-text flex flex-col gap-6">
             <img
               className="w-max h-10 object-cover"
-              src={logo}
-              alt={logoAlt || `${title} logo`}
+              src={companyLogo}
+              alt={logoAlt}
             />
             <h3 className="text-xl lg:text-2xl font-semibold text-primary-blue">
               {title}
@@ -47,9 +59,7 @@ const CaseStudyItem = ({
             <p className="mt-1">{overview}</p>
           </div>
           <div className="anim-cs-text">
-            <h4 className="mt-5 text-primary-blue">
-              {index === 0 ? "What we did?" : "Achievement"}
-            </h4>
+            <h4 className="mt-5 text-primary-blue">Achievement</h4>
             <p className="mt-1">{achievement}</p>
           </div>
         </div>
@@ -59,7 +69,6 @@ const CaseStudyItem = ({
 };
 
 CaseStudyItem.propTypes = {
-  index: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,

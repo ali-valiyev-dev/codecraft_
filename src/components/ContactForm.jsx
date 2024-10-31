@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { z } from "zod";
 import Button from "./Button";
-
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useGSAP } from "@gsap/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
 
 const contactSchema = z.object({
   name: z

@@ -1,42 +1,56 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from "react";
 import {
   Button,
   Container,
   Accordion,
   SectionHeader,
-  TechPartners,
+  Loading,
 } from "../components";
-import { SOLUTIONS_DATA } from "../constants";
 import { useGSAP } from "@gsap/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
+import { useFetchData, useFetchMedia, useLoadingState } from "../hooks";
+import { VALID_SOLUTION_IDS } from "../constants";
+import { useEffect } from "react";
+import { TechPartners } from "../sections";
 
 const SolutionsPage = () => {
-  const params = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
-  const solution = SOLUTIONS_DATA.find(solution => solution.id === params.id);
-
-  useGSAP(() => {
-    animate([".anim-solution-title", ".anim-solution-content"]);
-  }, [params.id]);
-
   useEffect(() => {
-    if (!solution) {
+    if (!VALID_SOLUTION_IDS.includes(id)) {
       navigate("/notFound");
     }
-  }, [solution, navigate]);
+  }, [navigate, id]);
 
-  if (!solution) return null;
+  const { data: solutionsData } = useFetchData("solutions_data", "*", [
+    "solution_id",
+    id,
+  ]);
 
-  const { pageTitle, pageSubtitle, img, title, desc, accordionData } = solution;
+  const solution = solutionsData[0];
+
+  const mediaSrc = useFetchMedia("images", solution?.img);
+
+  const { loading, error } = useLoadingState(solutionsData, mediaSrc);
+
+  useGSAP(() => {
+    if (!loading) {
+      animate([".anim-solution-content"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+  if (loading || !solution) return <Loading />;
+
+  const { pageTitle, pageSubtitle, title, desc, accordionData } = solution;
 
   return (
     <Container>
       <div className="space-y-16 mt-20">
         {/* header with image */}
         <div className="flex flex-col items-center justify-center gap-8">
-          <div className="anim-solution-title">
+          <div className="anim-solution-content">
             <SectionHeader
               title={pageTitle}
               subtitle={pageSubtitle}
@@ -69,8 +83,8 @@ const SolutionsPage = () => {
             <div className="anim-solution-content lg:w-1/2 rounded-lg overflow-hidden">
               <img
                 className="w-full h-full object-cover"
-                src={img}
-                loading="lazy"
+                src={mediaSrc.mediaSrc}
+                loading="eager"
                 alt={`${pageTitle} Cover`}
               />
             </div>
@@ -79,10 +93,9 @@ const SolutionsPage = () => {
 
         {/* accordion */}
         <div className="space-y-6">
-          <h2 className="anim-solution-content text-4xl text-primary-blue font-semibold">
-            {`Our ${pageTitle}`}
+          <h2 className="anim-solution-content text-2xl lg:text-4xl text-primary-blue font-semibold">
+            What We Offer
           </h2>
-
           <Accordion data={accordionData} />
         </div>
 

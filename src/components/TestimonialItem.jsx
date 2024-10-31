@@ -1,12 +1,22 @@
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 import { useGSAP } from "@gsap/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
+import { useFetchMedia } from "../hooks";
+import Loading from "./Loading";
 
 const TestimonialItem = ({ rating, name, role, message, image }) => {
+  const { mediaSrc, loading, error } = useFetchMedia("images", image);
+
   useGSAP(() => {
-    animate([".anim-endrs-card"]);
-  }, []);
+    if (!loading) {
+      animate([".anim-endrs-card"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <div className="anim-endrs-card max-w-sm flex flex-col justify-between px-3 py-6 border border-primary-dark-blue bg-neutral-white rounded-lg">
@@ -32,7 +42,7 @@ const TestimonialItem = ({ rating, name, role, message, image }) => {
       {/* author */}
       <div className="flex items-center flex-nowrap gap-3">
         <img
-          src={image}
+          src={mediaSrc}
           loading="lazy"
           alt={name}
           className="w-20 h-20 rounded-full object-cover"

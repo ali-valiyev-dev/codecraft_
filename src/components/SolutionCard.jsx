@@ -1,18 +1,18 @@
 import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import animate from "../utils/animations";
 import { useGSAP } from "@gsap/react";
+import animate from "../utils/animate";
 
-const SolutionCard = ({ icon, title, desc, to }) => {
+const SolutionCard = ({ _id, icon, title, desc, to }) => {
   useGSAP(() => {
-    animate([".anim-solution-card"]);
+    animate([`.anim-solution-card-${_id}`]);
   }, []);
 
   return (
     <Link
       to={to}
-      className="anim-solution-card group max-w-[340px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white hover:bg-primary-blue justify-between border border-primary-dark-blue text-primary-blue hover:text-neutral-white transition-colors duration-300">
+      className={`anim-solution-card-${_id} group max-w-[340px] flex flex-col p-5 lg:px-6 lg:pt-8 rounded-lg bg-neutral-white hover:bg-primary-blue justify-between border border-primary-dark-blue text-primary-blue hover:text-neutral-white transition-colors duration-300`}>
       <div>
         <div className="w-max">
           <Icon
@@ -53,6 +53,7 @@ const SolutionCard = ({ icon, title, desc, to }) => {
 };
 
 SolutionCard.propTypes = {
+  _id: PropTypes.number.isRequired,
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,

@@ -8,7 +8,6 @@ const ContactsPage = lazy(() => import("./pages/ContactsPage"));
 const HomePage = lazy(() => import("./pages/HomePage"));
 const IndustriesPage = lazy(() => import("./pages/IndustriesPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
-const Policy = lazy(() => import("./pages/Policy"));
 const SolutionsPage = lazy(() => import("./pages/SolutionsPage"));
 
 function App() {
@@ -43,10 +42,6 @@ function App() {
           <Route
             path="contacts"
             element={<ContactsPage />}
-          />
-          <Route
-            path="privacy-policy"
-            element={<Policy />}
           />
           <Route
             path="*"

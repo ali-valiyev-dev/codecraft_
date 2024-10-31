@@ -4,9 +4,10 @@ import { gsap } from "gsap";
 import { Icon } from "@iconify/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const StatisticItem = ({ label, total }) => {
   const valueRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);

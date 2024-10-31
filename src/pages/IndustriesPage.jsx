@@ -4,34 +4,43 @@ import {
   Container,
   Accordion,
   SectionHeader,
-  TechPartners,
   IndustryCard,
+  Loading,
 } from "../components";
-import { INDUSTRIES_DATA } from "../constants";
-import animate from "../utils/animations";
+import { VALID_INDUSTRY_IDS } from "../constants";
+import animate from "../utils/animate";
 import { useGSAP } from "@gsap/react";
+import { useFetchData } from "../hooks";
+import { TechPartners } from "../sections";
 
 const IndustriesPage = () => {
-  const params = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
-  const industries = INDUSTRIES_DATA.find(
-    industries => industries.id === params.id
-  );
-
-  useGSAP(() => {
-    animate([".anim-industry-title", ".anim-industry-accordion-title"]);
-  }, [params.id]);
-
   useEffect(() => {
-    if (!industries) {
+    if (!VALID_INDUSTRY_IDS.includes(id)) {
       navigate("/notFound");
     }
-  }, [industries, navigate]);
+  }, [navigate, id]);
 
-  if (!industries) return null;
+  const {
+    data: industriesData,
+    loading,
+    error,
+  } = useFetchData("industries_data", "*", ["industry_id", id]);
 
-  const { pageTitle, pageSubtitle, cardsData, accordionData } = industries;
+  const industry = industriesData[0];
+
+  useGSAP(() => {
+    if (!loading) {
+      animate([".anim-industry-title", ".anim-industry-accordion-title"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+  if (loading || !industry) return <Loading />;
+
+  const { pageTitle, pageSubtitle, cardsData, accordionData } = industry;
 
   return (
     <Container>
@@ -57,7 +66,7 @@ const IndustriesPage = () => {
         {/* accordion */}
         <div className="space-y-6">
           <h2 className="anim-industry-accordion-title text-2xl lg:text-3xl text-primary-blue font-semibold">
-            {`Our ${pageTitle} Solutions`}
+            What We Offer
           </h2>
 
           <Accordion data={accordionData} />

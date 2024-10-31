@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
-import { FooterOfficeLocationDetails, Logo, SocialLink } from "../components";
-import { CONTACT_DETAILS, NAV_LINKS, SOCIAL_LINKS } from "../constants";
+import {
+  FooterOfficeLocationDetails,
+  Loading,
+  Logo,
+  SocialLink,
+} from "../components";
+import { NAV_LINKS } from "../constants";
+import { useFetchData, useLoadingState } from "../hooks";
 
 const Footer = () => {
+  const { data: contacts } = useFetchData("contacts", "*");
+  const { data: social_links } = useFetchData("social_links", "*");
+
+  const { loading, error } = useLoadingState(contacts, social_links);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
+
   return (
     <footer className="bg-primary-blue w-full text-neutral-white">
       <div className="mx-auto max-w-screen-2xl py-4 px-3 md:py-6 md:px-8 lg:py-8 lg:px-12">
@@ -16,7 +31,7 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex items-center gap-3">
-              {SOCIAL_LINKS.map((link, index) => (
+              {social_links.map((link, index) => (
                 <SocialLink
                   key={index}
                   {...link}
@@ -62,7 +77,7 @@ const Footer = () => {
 
             {/* Branch contacts */}
             <div className="flex flex-col md:flex-row gap-y-6 gap-x-10">
-              {CONTACT_DETAILS.map((item, index) => (
+              {contacts.map((item, index) => (
                 <FooterOfficeLocationDetails
                   key={index}
                   {...item}
@@ -74,10 +89,10 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="mt-6 border-t pt-4 flex gap-x-6 items-center text-sm">
-          <span>&copy; 2024 Rabalon</span>
+          <span>&copy; {new Date().getFullYear()} Codecraft_</span>
 
           <Link
-            to="/privacy-policy"
+            to="/"
             className="text-neutral-300 hover:text-neutral-white">
             Privacy Policy
           </Link>

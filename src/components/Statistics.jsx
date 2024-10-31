@@ -1,14 +1,20 @@
+import { useFetchData } from "../hooks";
+import Loading from "./Loading";
 import StatisticItem from "./StatisticItem";
-import { STATS } from "../constants";
 
 const Statistics = () => {
+  const { data, loading, error } = useFetchData("statistics", "*");
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
+
   return (
     <div className="w-full flex flex-wrap justify-evenly items-center gap-y-12">
-      {STATS.map(({ label, total }, index) => (
+      {data.map(stats => (
         <StatisticItem
-          key={index}
-          label={label}
-          total={total}
+          key={stats._id}
+          {...stats}
         />
       ))}
     </div>

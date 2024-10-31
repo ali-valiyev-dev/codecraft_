@@ -5,5 +5,15 @@ import CaseStudies from "./CaseStudies.jsx";
 import Testimonials from "./Testimonials.jsx";
 import Contacts from "./Contacts.jsx";
 import Footer from "./Footer.jsx";
+import TechPartners from "./TechPartners.jsx";
 
-export { Hero, Solutions, About, CaseStudies, Testimonials, Contacts, Footer };
+export {
+  Hero,
+  Solutions,
+  About,
+  TechPartners,
+  CaseStudies,
+  Testimonials,
+  Contacts,
+  Footer,
+};

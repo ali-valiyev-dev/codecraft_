@@ -1,13 +1,25 @@
 import { useGSAP } from "@gsap/react";
-import { Container, SectionHeader } from "../components";
+import { Container, Loading, SectionHeader } from "../components";
 import { TestimonialItem } from "../components";
-import { TESTIMONIALS } from "../constants";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
+import { useFetchData } from "../hooks";
 
 const Testimonials = () => {
+  const {
+    data: testimonials,
+    loading,
+    error,
+  } = useFetchData("testimonials", "*");
+
   useGSAP(() => {
-    animate([".anim-endrs-title"]);
-  }, []);
+    if (!loading) {
+      animate([".anim-endrs-title"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <Container>
@@ -22,9 +34,9 @@ const Testimonials = () => {
 
         {/* main content */}
         <div className="w-full flex justify-center flex-wrap gap-6 ">
-          {TESTIMONIALS.map((testimonial, index) => (
+          {testimonials.map(testimonial => (
             <TestimonialItem
-              key={index}
+              key={testimonial._id}
               {...testimonial}
             />
           ))}

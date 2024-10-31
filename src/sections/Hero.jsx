@@ -1,24 +1,37 @@
 import { Icon } from "@iconify/react";
-import FeaturedClients from "../components/FeaturedClients";
+import { FeaturedClients, Loading } from "../components";
+import { useLoadingState, useFetchData, useFetchMedia } from "../hooks";
 import { useGSAP } from "@gsap/react";
-import animate from "../utils/animations";
+import animate from "../utils/animate";
 
 const Hero = () => {
+  const { data } = useFetchData("hero", "*");
+  const { mediaSrc } = useFetchMedia("videos", "hero-bg.mp4");
+
+  const { loading, error } = useLoadingState(data, mediaSrc);
+
   useGSAP(() => {
-    animate([".anim-hero-content"]);
-  }, []);
+    if (!loading) {
+      animate([".anim-hero-content"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <section className="w-full flex justify-center overflow-hidden relative">
+      {/* Hero bg video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/rabalon-hero.mp4"
+        src={mediaSrc}
         autoPlay
         muted
         loop
         preload="none"
         playsInline
-        aria-label="Background video of Rabalon"
+        aria-label="Background video of Codecraft_"
       />
 
       <div className="absolute inset-0 bg-primary-blue bg-opacity-70" />
@@ -27,17 +40,14 @@ const Hero = () => {
         {/* Hero text */}
         <div className=" text-center text-neutral-white space-y-5">
           <h1 className="anim-hero-content text-3xl md:text-4xl lg:text-6xl">
-            Your Tech Partner <br />
+            {data[0]?.header} <br />
             <span className="text-primary-very-light-blue font-bold">
-              For Accelerated Growth
+              {data[0]?.sub_header}
             </span>
           </h1>
 
           <p className="anim-hero-content text-lg lg:text-xl xl:text-2xl">
-            Rabalon emerged from a realization that small businesses face
-            significant hurdles in the digital technology space. Our approach is
-            two-pronged: we provide technology consulting services to recommend
-            and implement existing solutions.
+            {data[0]?.desc}
           </p>
         </div>
 

@@ -1,11 +1,21 @@
 import { useGSAP } from "@gsap/react";
+import animate from "../utils/animate";
 import PropTypes from "prop-types";
-import animate from "../utils/animations";
+import { useFetchMedia } from "../hooks";
+import Loading from "./Loading";
 
 const MemberCard = ({ img, name, position }) => {
+  const { mediaSrc, error, loading } = useFetchMedia("images", img);
+
   useGSAP(() => {
-    animate([".anim-member-card"]);
-  }, []);
+    if (!loading) {
+      animate([".anim-member-card"]);
+    }
+  }, [loading]);
+
+  if (error) return null;
+
+  if (loading) return <Loading />;
 
   return (
     <div className="anim-member-card max-w-80 sm:max-w-72 xl:max-w-80  flex flex-col px-4 py-4 rounded-xl bg-neutral-white justify-between border border-primary-dark-blue text-primary-blue">
@@ -13,8 +23,8 @@ const MemberCard = ({ img, name, position }) => {
         {/* member image */}
         <div className="rounded-md overflow-hidden">
           <img
-            src={img}
-            loading="lazy"
+            src={mediaSrc}
+            loading="eager"
             alt={name}
             className="w-full h-auto object-cover"
           />

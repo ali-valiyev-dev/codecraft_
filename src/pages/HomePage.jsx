@@ -1,11 +1,11 @@
-import { TechPartners } from "../components";
 import {
-  About,
-  CaseStudies,
-  Contacts,
   Hero,
   Solutions,
+  About,
+  TechPartners,
   Testimonials,
+  CaseStudies,
+  Contacts,
 } from "../sections";
 
 const HomePage = () => {
@@ -15,8 +15,8 @@ const HomePage = () => {
       <Solutions />
       <About />
       <TechPartners />
-      <CaseStudies />
       <Testimonials />
+      <CaseStudies />
       <Contacts />
     </div>
   );

@@ -18,13 +18,15 @@ import TestimonialItem from "./TestimonialItem.jsx";
 import ContactForm from "./ContactForm.jsx";
 import OfficeLocationCard from "./OfficeLocationCard.jsx";
 import FooterOfficeLocationDetails from "./FooterOfficeLocationDetails.jsx";
-import TechPartners from "./TechPartners.jsx";
+import TechPartner from "./TechPartner.jsx";
 import FeaturedClients from "./FeaturedClients.jsx";
+import FeaturedClient from "./FeaturedClient.jsx";
 import Accordion from "./Accordion.jsx";
 import IndustryCard from "./IndustryCard.jsx";
 import MemberCard from "./MemberCard.jsx";
 import Loading from "./Loading.jsx";
 import HeroContactsButton from "./HeroContactsButton.jsx";
+import ImagesGrid from "./ImagesGrid.jsx";
 
 export {
   Header,
@@ -47,11 +49,13 @@ export {
   TestimonialItem,
   ContactForm,
   OfficeLocationCard,
-  TechPartners,
+  TechPartner,
   FooterOfficeLocationDetails,
   FeaturedClients,
+  FeaturedClient,
   Accordion,
   IndustryCard,
   MemberCard,
   Loading,
+  ImagesGrid,
 };
